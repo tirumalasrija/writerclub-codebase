@@ -1,0 +1,154 @@
+2020-07-29T14:18:52+00:00 INFO Subscription Request Parameters: Array
+(
+    [method] => POST
+    [uri] => https://api-3t.paypal.com/nvp
+    [user-agent] => WooCommerce-Subscriptions-PayPal/2.2.13 (WooCommerce/4.3.1; WordPress/5.4.2)
+    [headers] => Array
+        (
+        )
+
+    [body] => Array
+(
+    [USER] => **************************
+    [PWD] => ****************
+    [SIGNATURE] => ********************************************************
+    [VERSION] => 124
+    [METHOD] => SetExpressCheckout
+    [L_BILLINGTYPE0] => MerchantInitiatedBillingSingleAgreement
+    [L_BILLINGAGREEMENTDESCRIPTION0] => Orders with worldwidestorytellers
+    [RETURNURL] => https://worldwidestorytellers.com/wc-api/wcs_paypal/?action=reference_transaction_account_check
+    [CANCELURL] => https://worldwidestorytellers.com/wc-api/wcs_paypal/?action=reference_transaction_account_check
+    [BRANDNAME] => worldwidestorytellers
+    [LANDINGPAGE] => Login
+    [NOSHIPPING] => 1
+    [MAXAMT] => 0.00
+)
+
+    [duration] => 1.17655s
+)
+
+2020-07-29T14:18:52+00:00 INFO Subscription Request Response: Array
+(
+    [code] => 200
+    [message] => OK
+    [headers] => Requests_Utility_CaseInsensitiveDictionary Object
+        (
+            [data:protected] => Array
+                (
+                    [content-type] => text/plain; charset=utf-8
+                    [content-length] => 293
+                    [date] => Wed, 29 Jul 2020 14:18:52 GMT
+                    [cache-control] => max-age=0, no-cache, no-store, must-revalidate
+                    [caller_acct_num] => 6DBA2B93023789731D1A06B95F73B991A00381558F9C1C3659D65C42BA161EEC
+                    [paypal-debug-id] => 93de0151443ea
+                    [x-paypal-api-rc] => 11452
+                    [x-paypal-operation-name] => SetExpressCheckout
+                    [x-slr-retry-api] => SetExpressCheckout
+                    [strict-transport-security] => max-age=31536000; includeSubDomains
+                )
+
+        )
+
+    [body] => Array
+(
+    [TIMESTAMP] => 2020-07-29T14:18:52Z
+    [CORRELATIONID] => 93de0151443ea
+    [ACK] => Failure
+    [VERSION] => 124
+    [BUILD] => 54759983
+    [L_ERRORCODE0] => 11452
+    [L_SHORTMESSAGE0] => Merchant not enabled for reference transactions
+    [L_LONGMESSAGE0] => Merchant not enabled for reference transactions
+    [L_SEVERITYCODE0] => Error
+)
+
+)
+
+2020-07-29T14:22:04+00:00 INFO Generating payment form for order 591. Notify URL: https://worldwidestorytellers.com/wc-api/WC_Gateway_Paypal/
+2020-07-29T14:22:04+00:00 INFO PayPal Request Args for order 591: Array
+(
+    [cmd] => _xclick-subscriptions
+    [business] => bongosbooks@gmail.com
+    [no_note] => 1
+    [currency_code] => INR
+    [charset] => utf-8
+    [rm] => 2
+    [upload] => 1
+    [return] => https://worldwidestorytellers.com/checkout/order-received/591/?key=wc_order_gtI8tejJBKkx3&utm_nooverride=1
+    [cancel_return] => https://worldwidestorytellers.com/cart/?cancel_order=true&order=wc_order_gtI8tejJBKkx3&order_id=591&redirect&_wpnonce=0168802765
+    [page_style] => 
+    [image_url] => 
+    [paymentaction] => sale
+    [invoice] => WC-591
+    [custom] => {"order_id":591,"order_key":"wc_order_gtI8tejJBKkx3","subscription_id":592,"subscription_key":"wc_order_5f21860b40a80"}
+    [notify_url] => https://worldwidestorytellers.com/wc-api/WC_Gateway_Paypal/
+    [first_name] => ***
+    [last_name] => ***
+    [address1] => ***
+    [address2] => ***
+    [city] => ***
+    [state] => ***
+    [zip] => ***
+    [country] => ***
+    [email] => ***@***
+    [night_phone_a] => ***
+    [night_phone_b] => ***
+    [no_shipping] => 1
+    [tax_cart] => 0.00
+    [item_name_1] => Worldwide storytellers  Monthly
+    [quantity_1] => 1
+    [amount_1] => 0.99
+    [item_number_1] => 
+    [item_name] => Subscription 592 (Order 591) - Worldwide storytellers  Monthly
+    [a3] => 0.99
+    [p3] => 1
+    [t3] => M
+    [src] => 0
+    [sra] => 0
+    [bn] => WooThemes_Cart
+)
+
+2020-07-29T14:22:44+00:00 INFO Generating payment form for order 593. Notify URL: https://worldwidestorytellers.com/wc-api/WC_Gateway_Paypal/
+2020-07-29T14:22:44+00:00 INFO PayPal Request Args for order 593: Array
+(
+    [cmd] => _xclick-subscriptions
+    [business] => bongosbooks@gmail.com
+    [no_note] => 1
+    [currency_code] => INR
+    [charset] => utf-8
+    [rm] => 2
+    [upload] => 1
+    [return] => https://worldwidestorytellers.com/checkout/order-received/593/?key=wc_order_KWNVJcnJWpUPF&utm_nooverride=1
+    [cancel_return] => https://worldwidestorytellers.com/cart/?cancel_order=true&order=wc_order_KWNVJcnJWpUPF&order_id=593&redirect&_wpnonce=0168802765
+    [page_style] => 
+    [image_url] => 
+    [paymentaction] => sale
+    [invoice] => WC-593
+    [custom] => {"order_id":593,"order_key":"wc_order_KWNVJcnJWpUPF","subscription_id":594,"subscription_key":"wc_order_5f218633d03db"}
+    [notify_url] => https://worldwidestorytellers.com/wc-api/WC_Gateway_Paypal/
+    [first_name] => ***
+    [last_name] => ***
+    [address1] => ***
+    [address2] => ***
+    [city] => ***
+    [state] => ***
+    [zip] => ***
+    [country] => ***
+    [email] => ***@***
+    [night_phone_a] => ***
+    [night_phone_b] => ***
+    [no_shipping] => 1
+    [tax_cart] => 0.00
+    [item_name_1] => Worldwide storytellers  Monthly
+    [quantity_1] => 1
+    [amount_1] => 0.99
+    [item_number_1] => 
+    [item_name] => Subscription 594 (Order 593) - Worldwide storytellers  Monthly
+    [a3] => 0.99
+    [p3] => 1
+    [t3] => M
+    [src] => 0
+    [sra] => 0
+    [bn] => WooThemes_Cart
+)
+

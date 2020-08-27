@@ -1,0 +1,153 @@
+#gpp-new-post {
+	padding: 20px 0;
+}
+
+#gpp-new-post .wp-editor-container {
+	border: 1px solid #DBDBDB;
+}
+
+
+#gpp-new-post #gpp-tags,
+#gpp-new-post #gpp-category,
+#gpp-new-post #gpp-about {
+	clear: both;
+	margin: 20px 0;
+	padding: 10px;
+	background: #fff;
+	border: 1px solid #DDDDDD;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset;
+}
+
+#gpp-new-post label {
+	font-size: 15px;
+	font-weight: bold;
+	display: table;
+	cursor: pointer;
+}
+
+
+#gpp-new-post #gpp-tags,
+#gpp-new-post #gpp-category {
+	box-sizing: border-box;
+	width: 400px;
+}
+
+#gpp-new-post #gpp-about {
+	width: 96.5%;
+}
+
+
+#gpp-new-post .wp-editor-area {
+	background: #FFF;
+}
+
+#gpp-new-post #gpp-featured-image {
+	background: none repeat scroll 0 0 #ececec;
+	border: 1px solid #e1e1e1;
+	display: table;
+	margin: 20px 0;
+	padding: 20px;
+	text-align: center;
+}
+
+#wp-gpp-post-content-wrap {
+	margin-bottom: 20px;
+}
+
+img.gpp-loading-img {
+	display: none;
+	box-shadow: none;
+	margin-left: 10px;
+}
+
+
+
+
+
+
+	
+
+#no-js, #gpp-message {
+	padding: 20px;
+	margin-bottom: 20px;
+	clear: both;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+#gpp-message {
+	display: none;
+}
+
+#gpp-message.warning {
+	background: #FFEBE8;
+	border: 1px solid #FFA1A1;
+}
+
+#gpp-message.success {
+	background: none repeat scroll 0 0 #DBF9DB;
+	border: 1px solid #25A825;
+}
+
+.gpp-author-bio {
+	width: 100%;
+	clear: both;
+	padding: 20px 0;
+}
+
+#gpp-posts > ul {
+	list-style: none outside none;
+	margin: 0;
+}
+
+#gpp-posts li {
+	display: table;
+	list-style: none outside none;
+	margin: 0 5px 0 5px;
+	padding: 0;
+	float: left;
+}
+
+#gpp-posts li a {
+	background: #F7F7F7;
+	border-color: #DCDCDC;
+	border-style: solid;
+	border-width: 1px;
+	box-shadow: 0 0 10px #EEEEEE inset;
+	color: #858585;
+	display: table;
+	padding: 8px 20px;
+	text-decoration: none;
+	margin-bottom: -1px;
+}
+
+#gpp-posts li a.active {
+	background: #FFFFFF;
+	border-bottom: 1px solid #FFF;
+	box-shadow: none;
+}
+
+#gpp-posts .gpp-fixed-td {
+	width: 15%;
+	text-align: center;
+}
+
+#gpp-post-table-container {
+	border-top: 1px solid #DCDCDC;
+	clear: both;
+	padding-top: 20px;
+}
+
+#gpp-posts .gpp-nav {
+	clear: both;
+	display: block;
+}
+
+#gpp-posts .gpp-nav-link.gpp-nav-link-left {
+	float: left;
+}
+
+#gpp-posts .gpp-nav-link.gpp-nav-link-right {
+	float: right;
+}

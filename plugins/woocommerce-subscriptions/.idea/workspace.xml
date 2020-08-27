@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="778677e2-a16d-40ca-bdd3-775a172e69f0" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/reisrenneker.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/api/legacy/class-wc-rest-subscription-notes-controller.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/api/legacy/class-wc-rest-subscriptions-controller.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/class-wc-order-item-pending-switch.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/class-wcs-cached-data-manager.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/class-wcs-my-account-payment-methods.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/class-wcs-select2.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/data-stores/class-wcs-subscription-data-store-cpt.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/deprecated/class-wcs-deprecated-filter-hooks.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/legacy/class-wc-product-subscription-legacy.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/legacy/class-wc-product-subscription-variation-legacy.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/legacy/class-wc-product-variable-subscription-legacy.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/legacy/class-wc-subscription-legacy.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/legacy/class-wcs-array-property-post-meta-black-magic.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/legacy/class-wcs-product-legacy.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/libraries/action-scheduler/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/libraries/class-wc-datetime.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/upgrades/class-wcs-upgrade-2-2-7.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/upgrades/class-wcs-upgrade-2-2-9.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/wcs-product-functions.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin/status.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/admin.css" afterPath="$PROJECT_DIR$/assets/css/admin.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/checkout.css" afterPath="$PROJECT_DIR$/assets/css/checkout.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/admin/admin.js" afterPath="$PROJECT_DIR$/assets/js/admin/admin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changelog.txt" afterPath="$PROJECT_DIR$/changelog.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/abstracts/abstract-wcs-cache-manager.php" afterPath="$PROJECT_DIR$/includes/abstracts/abstract-wcs-cache-manager.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/abstracts/abstract-wcs-hook-deprecator.php" afterPath="$PROJECT_DIR$/includes/abstracts/abstract-wcs-hook-deprecator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/abstracts/abstract-wcs-scheduler.php" afterPath="$PROJECT_DIR$/includes/abstracts/abstract-wcs-scheduler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/admin/class-wc-subscriptions-admin.php" afterPath="$PROJECT_DIR$/includes/admin/class-wc-subscriptions-admin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/admin/class-wcs-admin-meta-boxes.php" afterPath="$PROJECT_DIR$/includes/admin/class-wcs-admin-meta-boxes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/admin/class-wcs-admin-post-types.php" afterPath="$PROJECT_DIR$/includes/admin/class-wcs-admin-post-types.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/admin/class-wcs-admin-reports.php" afterPath="$PROJECT_DIR$/includes/admin/class-wcs-admin-reports.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/admin/meta-boxes/class-wcs-meta-box-related-orders.php" afterPath="$PROJECT_DIR$/includes/admin/meta-boxes/class-wcs-meta-box-related-orders.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/admin/meta-boxes/class-wcs-meta-box-subscription-data.php" afterPath="$PROJECT_DIR$/includes/admin/meta-boxes/class-wcs-meta-box-subscription-data.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/admin/meta-boxes/class-wcs-meta-box-subscription-schedule.php" afterPath="$PROJECT_DIR$/includes/admin/meta-boxes/class-wcs-meta-box-subscription-schedule.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/admin/meta-boxes/views/html-related-orders-row.php" afterPath="$PROJECT_DIR$/includes/admin/meta-boxes/views/html-related-orders-row.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/admin/meta-boxes/views/html-subscription-schedule.php" afterPath="$PROJECT_DIR$/includes/admin/meta-boxes/views/html-subscription-schedule.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/admin/reports/class-wcs-report-cache-manager.php" afterPath="$PROJECT_DIR$/includes/admin/reports/class-wcs-report-cache-manager.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/admin/reports/class-wcs-report-upcoming-recurring-revenue.php" afterPath="$PROJECT_DIR$/includes/admin/reports/class-wcs-report-upcoming-recurring-revenue.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/api/class-wc-rest-subscription-notes-controller.php" afterPath="$PROJECT_DIR$/includes/api/class-wc-rest-subscription-notes-controller.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/api/class-wc-rest-subscriptions-controller.php" afterPath="$PROJECT_DIR$/includes/api/class-wc-rest-subscriptions-controller.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/api/legacy/class-wc-api-subscriptions-customers.php" afterPath="$PROJECT_DIR$/includes/api/legacy/class-wc-api-subscriptions-customers.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/api/legacy/class-wc-api-subscriptions.php" afterPath="$PROJECT_DIR$/includes/api/legacy/class-wc-api-subscriptions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-wc-product-subscription-variation.php" afterPath="$PROJECT_DIR$/includes/class-wc-product-subscription-variation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-wc-product-subscription.php" afterPath="$PROJECT_DIR$/includes/class-wc-product-subscription.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-wc-product-variable-subscription.php" afterPath="$PROJECT_DIR$/includes/class-wc-product-variable-subscription.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-wc-subscription.php" afterPath="$PROJECT_DIR$/includes/class-wc-subscription.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-wc-subscriptions-addresses.php" afterPath="$PROJECT_DIR$/includes/class-wc-subscriptions-addresses.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-wc-subscriptions-cart.php" afterPath="$PROJECT_DIR$/includes/class-wc-subscriptions-cart.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-wc-subscriptions-change-payment-gateway.php" afterPath="$PROJECT_DIR$/includes/class-wc-subscriptions-change-payment-gateway.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-wc-subscriptions-checkout.php" afterPath="$PROJECT_DIR$/includes/class-wc-subscriptions-checkout.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-wc-subscriptions-coupon.php" afterPath="$PROJECT_DIR$/includes/class-wc-subscriptions-coupon.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-wc-subscriptions-email.php" afterPath="$PROJECT_DIR$/includes/class-wc-subscriptions-email.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-wc-subscriptions-manager.php" afterPath="$PROJECT_DIR$/includes/class-wc-subscriptions-manager.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-wc-subscriptions-order.php" afterPath="$PROJECT_DIR$/includes/class-wc-subscriptions-order.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-wc-subscriptions-product.php" afterPath="$PROJECT_DIR$/includes/class-wc-subscriptions-product.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-wc-subscriptions-renewal-order.php" afterPath="$PROJECT_DIR$/includes/class-wc-subscriptions-renewal-order.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-wc-subscriptions-switcher.php" afterPath="$PROJECT_DIR$/includes/class-wc-subscriptions-switcher.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-wc-subscriptions-synchroniser.php" afterPath="$PROJECT_DIR$/includes/class-wc-subscriptions-synchroniser.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-wcs-action-scheduler.php" afterPath="$PROJECT_DIR$/includes/class-wcs-action-scheduler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-wcs-api.php" afterPath="$PROJECT_DIR$/includes/class-wcs-api.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-wcs-cache-manager-tlc.php" afterPath="$PROJECT_DIR$/includes/class-wcs-cache-manager-tlc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-wcs-cart-initial-payment.php" afterPath="$PROJECT_DIR$/includes/class-wcs-cart-initial-payment.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-wcs-cart-renewal.php" afterPath="$PROJECT_DIR$/includes/class-wcs-cart-renewal.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-wcs-cart-resubscribe.php" afterPath="$PROJECT_DIR$/includes/class-wcs-cart-resubscribe.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-wcs-cart-switch.php" afterPath="$PROJECT_DIR$/includes/class-wcs-cart-switch.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-wcs-change-payment-method-admin.php" afterPath="$PROJECT_DIR$/includes/class-wcs-change-payment-method-admin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-wcs-download-handler.php" afterPath="$PROJECT_DIR$/includes/class-wcs-download-handler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-wcs-limiter.php" afterPath="$PROJECT_DIR$/includes/class-wcs-limiter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-wcs-query.php" afterPath="$PROJECT_DIR$/includes/class-wcs-query.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-wcs-remove-item.php" afterPath="$PROJECT_DIR$/includes/class-wcs-remove-item.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-wcs-retry-manager.php" afterPath="$PROJECT_DIR$/includes/class-wcs-retry-manager.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-wcs-user-change-status-handler.php" afterPath="$PROJECT_DIR$/includes/class-wcs-user-change-status-handler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/class-wcs-webhooks.php" afterPath="$PROJECT_DIR$/includes/class-wcs-webhooks.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/deprecated/class-wcs-filter-deprecator.php" afterPath="$PROJECT_DIR$/includes/deprecated/class-wcs-filter-deprecator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/emails/class-wcs-email-cancelled-subscription.php" afterPath="$PROJECT_DIR$/includes/emails/class-wcs-email-cancelled-subscription.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/emails/class-wcs-email-customer-completed-renewal-order.php" afterPath="$PROJECT_DIR$/includes/emails/class-wcs-email-customer-completed-renewal-order.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/emails/class-wcs-email-customer-completed-switch-order.php" afterPath="$PROJECT_DIR$/includes/emails/class-wcs-email-customer-completed-switch-order.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/emails/class-wcs-email-customer-payment-retry.php" afterPath="$PROJECT_DIR$/includes/emails/class-wcs-email-customer-payment-retry.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/emails/class-wcs-email-customer-processing-renewal-order.php" afterPath="$PROJECT_DIR$/includes/emails/class-wcs-email-customer-processing-renewal-order.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/emails/class-wcs-email-customer-renewal-invoice.php" afterPath="$PROJECT_DIR$/includes/emails/class-wcs-email-customer-renewal-invoice.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/emails/class-wcs-email-new-renewal-order.php" afterPath="$PROJECT_DIR$/includes/emails/class-wcs-email-new-renewal-order.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/emails/class-wcs-email-new-switch-order.php" afterPath="$PROJECT_DIR$/includes/emails/class-wcs-email-new-switch-order.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/emails/class-wcs-email-payment-retry.php" afterPath="$PROJECT_DIR$/includes/emails/class-wcs-email-payment-retry.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/gateways/class-wc-subscriptions-payment-gateways.php" afterPath="$PROJECT_DIR$/includes/gateways/class-wc-subscriptions-payment-gateways.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/gateways/paypal/class-wcs-paypal.php" afterPath="$PROJECT_DIR$/includes/gateways/paypal/class-wcs-paypal.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/gateways/paypal/includes/admin/class-wcs-paypal-admin.php" afterPath="$PROJECT_DIR$/includes/gateways/paypal/includes/admin/class-wcs-paypal-admin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/gateways/paypal/includes/admin/class-wcs-paypal-change-payment-method-admin.php" afterPath="$PROJECT_DIR$/includes/gateways/paypal/includes/admin/class-wcs-paypal-change-payment-method-admin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/gateways/paypal/includes/class-wcs-paypal-reference-transaction-api-request.php" afterPath="$PROJECT_DIR$/includes/gateways/paypal/includes/class-wcs-paypal-reference-transaction-api-request.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/gateways/paypal/includes/class-wcs-paypal-reference-transaction-ipn-handler.php" afterPath="$PROJECT_DIR$/includes/gateways/paypal/includes/class-wcs-paypal-reference-transaction-ipn-handler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/gateways/paypal/includes/class-wcs-paypal-standard-ipn-handler.php" afterPath="$PROJECT_DIR$/includes/gateways/paypal/includes/class-wcs-paypal-standard-ipn-handler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/gateways/paypal/includes/class-wcs-paypal-standard-request.php" afterPath="$PROJECT_DIR$/includes/gateways/paypal/includes/class-wcs-paypal-standard-request.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/gateways/paypal/includes/class-wcs-paypal-standard-switcher.php" afterPath="$PROJECT_DIR$/includes/gateways/paypal/includes/class-wcs-paypal-standard-switcher.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/gateways/paypal/includes/class-wcs-paypal-status-manager.php" afterPath="$PROJECT_DIR$/includes/gateways/paypal/includes/class-wcs-paypal-status-manager.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/gateways/paypal/includes/class-wcs-paypal-supports.php" afterPath="$PROJECT_DIR$/includes/gateways/paypal/includes/class-wcs-paypal-supports.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/gateways/paypal/includes/wcs-paypal-functions.php" afterPath="$PROJECT_DIR$/includes/gateways/paypal/includes/wcs-paypal-functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/libraries/action-scheduler/action-scheduler.php" afterPath="$PROJECT_DIR$/includes/libraries/action-scheduler/action-scheduler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/libraries/action-scheduler/classes/ActionScheduler_AdminView.php" afterPath="$PROJECT_DIR$/includes/libraries/action-scheduler/classes/ActionScheduler_AdminView.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/libraries/action-scheduler/classes/ActionScheduler_CronSchedule.php" afterPath="$PROJECT_DIR$/includes/libraries/action-scheduler/classes/ActionScheduler_CronSchedule.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/libraries/action-scheduler/classes/ActionScheduler_IntervalSchedule.php" afterPath="$PROJECT_DIR$/includes/libraries/action-scheduler/classes/ActionScheduler_IntervalSchedule.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/libraries/action-scheduler/classes/ActionScheduler_NullSchedule.php" afterPath="$PROJECT_DIR$/includes/libraries/action-scheduler/classes/ActionScheduler_NullSchedule.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/libraries/action-scheduler/classes/ActionScheduler_QueueRunner.php" afterPath="$PROJECT_DIR$/includes/libraries/action-scheduler/classes/ActionScheduler_QueueRunner.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/libraries/action-scheduler/classes/ActionScheduler_Schedule.php" afterPath="$PROJECT_DIR$/includes/libraries/action-scheduler/classes/ActionScheduler_Schedule.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/libraries/action-scheduler/classes/ActionScheduler_SimpleSchedule.php" afterPath="$PROJECT_DIR$/includes/libraries/action-scheduler/classes/ActionScheduler_SimpleSchedule.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/libraries/action-scheduler/classes/ActionScheduler_wpCommentLogger.php" afterPath="$PROJECT_DIR$/includes/libraries/action-scheduler/classes/ActionScheduler_wpCommentLogger.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/payment-retry/class-wcs-retry-email.php" afterPath="$PROJECT_DIR$/includes/payment-retry/class-wcs-retry-email.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/payment-retry/class-wcs-retry-rules.php" afterPath="$PROJECT_DIR$/includes/payment-retry/class-wcs-retry-rules.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/upgrades/class-wc-subscriptions-upgrader.php" afterPath="$PROJECT_DIR$/includes/upgrades/class-wc-subscriptions-upgrader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/upgrades/class-wcs-repair-2-0-2.php" afterPath="$PROJECT_DIR$/includes/upgrades/class-wcs-repair-2-0-2.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/upgrades/class-wcs-repair-2-0.php" afterPath="$PROJECT_DIR$/includes/upgrades/class-wcs-repair-2-0.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/upgrades/class-wcs-upgrade-1-2.php" afterPath="$PROJECT_DIR$/includes/upgrades/class-wcs-upgrade-1-2.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/upgrades/class-wcs-upgrade-2-0.php" afterPath="$PROJECT_DIR$/includes/upgrades/class-wcs-upgrade-2-0.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/upgrades/class-wcs-upgrade-logger.php" afterPath="$PROJECT_DIR$/includes/upgrades/class-wcs-upgrade-logger.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/upgrades/templates/wcs-about-2-0.php" afterPath="$PROJECT_DIR$/includes/upgrades/templates/wcs-about-2-0.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/wcs-cart-functions.php" afterPath="$PROJECT_DIR$/includes/wcs-cart-functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/wcs-compatibility-functions.php" afterPath="$PROJECT_DIR$/includes/wcs-compatibility-functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/wcs-deprecated-functions.php" afterPath="$PROJECT_DIR$/includes/wcs-deprecated-functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/wcs-helper-functions.php" afterPath="$PROJECT_DIR$/includes/wcs-helper-functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/wcs-limit-functions.php" afterPath="$PROJECT_DIR$/includes/wcs-limit-functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/wcs-order-functions.php" afterPath="$PROJECT_DIR$/includes/wcs-order-functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/wcs-renewal-functions.php" afterPath="$PROJECT_DIR$/includes/wcs-renewal-functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/wcs-resubscribe-functions.php" afterPath="$PROJECT_DIR$/includes/wcs-resubscribe-functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/wcs-switch-functions.php" afterPath="$PROJECT_DIR$/includes/wcs-switch-functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/wcs-time-functions.php" afterPath="$PROJECT_DIR$/includes/wcs-time-functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/wcs-user-functions.php" afterPath="$PROJECT_DIR$/includes/wcs-user-functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/woocommerce-subscriptions.pot" afterPath="$PROJECT_DIR$/languages/woocommerce-subscriptions.pot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.txt" afterPath="$PROJECT_DIR$/readme.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/admin/deprecated/html-variation-price.php" afterPath="$PROJECT_DIR$/templates/admin/deprecated/html-variation-price.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/admin/html-variation-price.php" afterPath="$PROJECT_DIR$/templates/admin/html-variation-price.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/checkout/form-change-payment-method.php" afterPath="$PROJECT_DIR$/templates/checkout/form-change-payment-method.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/checkout/recurring-totals.php" afterPath="$PROJECT_DIR$/templates/checkout/recurring-totals.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/emails/cancelled-subscription.php" afterPath="$PROJECT_DIR$/templates/emails/cancelled-subscription.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/emails/customer-renewal-invoice.php" afterPath="$PROJECT_DIR$/templates/emails/customer-renewal-invoice.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/emails/email-order-details.php" afterPath="$PROJECT_DIR$/templates/emails/email-order-details.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/emails/expired-subscription.php" afterPath="$PROJECT_DIR$/templates/emails/expired-subscription.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/emails/on-hold-subscription.php" afterPath="$PROJECT_DIR$/templates/emails/on-hold-subscription.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/emails/plain/admin-new-switch-order.php" afterPath="$PROJECT_DIR$/templates/emails/plain/admin-new-switch-order.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/emails/plain/cancelled-subscription.php" afterPath="$PROJECT_DIR$/templates/emails/plain/cancelled-subscription.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/emails/plain/customer-renewal-invoice.php" afterPath="$PROJECT_DIR$/templates/emails/plain/customer-renewal-invoice.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/emails/plain/email-order-details.php" afterPath="$PROJECT_DIR$/templates/emails/plain/email-order-details.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/emails/plain/expired-subscription.php" afterPath="$PROJECT_DIR$/templates/emails/plain/expired-subscription.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/emails/plain/on-hold-subscription.php" afterPath="$PROJECT_DIR$/templates/emails/plain/on-hold-subscription.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/emails/plain/subscription-info.php" afterPath="$PROJECT_DIR$/templates/emails/plain/subscription-info.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/emails/subscription-info.php" afterPath="$PROJECT_DIR$/templates/emails/subscription-info.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/myaccount/my-subscriptions.php" afterPath="$PROJECT_DIR$/templates/myaccount/my-subscriptions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/myaccount/related-orders.php" afterPath="$PROJECT_DIR$/templates/myaccount/related-orders.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/myaccount/view-subscription.php" afterPath="$PROJECT_DIR$/templates/myaccount/view-subscription.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/single-product/add-to-cart/subscription.php" afterPath="$PROJECT_DIR$/templates/single-product/add-to-cart/subscription.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/single-product/add-to-cart/variable-subscription.php" afterPath="$PROJECT_DIR$/templates/single-product/add-to-cart/variable-subscription.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wcs-functions.php" afterPath="$PROJECT_DIR$/wcs-functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/woocommerce-subscriptions.php" afterPath="$PROJECT_DIR$/woocommerce-subscriptions.php" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="jstz.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/js/admin/jstz.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="3" lean-forward="true" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1680" />
+    <option name="height" value="987" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="woocommerce-subscriptions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="woocommerce-subscriptions" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="778677e2-a16d-40ca-bdd3-775a172e69f0" name="Default" comment="" />
+      <created>1508862324710</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1508862324710</updated>
+      <workItem from="1508862326336" duration="136000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="136000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1680" height="987" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24969475" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/assets/js/admin/jstz.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="3" lean-forward="true" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

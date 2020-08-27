@@ -1,0 +1,17 @@
+{
+  "name": "tmprod/woocommerce-memberships",
+  "description": "Private repository for the WooCommerce Memberships plugin.",
+  "type": "wordpress-plugin",
+  "authors": [
+    {
+      "name": "Trademark Productions",
+      "email": "cm@tmprod.com"
+    }
+  ],
+  "require": {
+    "composer/installers": "~1.0"
+  },
+  "extra": {
+    "installer-name": "woocommerce-memberships"
+  }
+}
