@@ -87,9 +87,10 @@ if(is_front_page())
       <div class="container">
     <div  class="spacer pt-60">
         <nav  class="navbar navbar-expand-lg navbar-dark info-color bg-white fixed-top">
+            <div class="container">
             <div  class="overlay"></div>
             <a  class="navbar-brand"  href="<?php echo site_url(''); ?>">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/Reg_Bingos_logo.png" /> 				 
+            <img src="https://universitiesconnect.com/worldstory/wp-content/uploads/2020/08/BONGOS_WorldwideAdventures_Logo.png" /> 				 
             </a>
             <button  aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent-4" data-toggle="collapse" type="button">
                 <span  class="navbar-toggler-icon"></span>
@@ -124,6 +125,7 @@ if(is_front_page())
                     <li class="nav-item d-none d-lg-none d-block "><a  class="nav-link" href="<?php echo wp_logout_url(); ?>">Logout</a></li>
                   <?php } ?>
                 </ul>
+            </div>
             </div>
         </nav>
     </div>
