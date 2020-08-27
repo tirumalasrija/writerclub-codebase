@@ -1035,7 +1035,9 @@ body.bg-none{background: none !important;}.bd-highlight{padding-left:5%}
     
 }
 .footer-m .color {
-    color: #718EA4;
+    /* color: #718EA4; */
+    color: #000;
+    font-weight: 700;
 }
 
 .footer-m .social {
@@ -1060,10 +1062,12 @@ body.bg-none{background: none !important;}.bd-highlight{padding-left:5%}
 }
 
 .footer-m a i {
-    color: #FF778D;
+    /* color: #FF778D; */
+    color: #063E4A;
 }
 .footer-bg{
-    background: #A9D7E1;
+    /* background: #A9D7E1; */
+    background: #38B6D2;
 }
 
 /* Date picker Styles */
@@ -2537,7 +2541,7 @@ button.btn.btn-default.yearly {
 }
 input.form-check-input {
   position: absolute;
-  /*opacity: 0;*/
+  opacity: 0;
 }
 .subscribe_form .card-body{
   padding: 10px 40px;
@@ -2648,4 +2652,61 @@ img.img-fluid.no-story {
 .empty-bg{
   background: url(../assets/group-7.png)no-repeat scroll center center / 100%;
   background-size: cover;
+}
+
+/* pavan 26 08 2020 */
+.es_subscription_form input {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + .75rem + 2px);
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.es_subscription_form .es_subscription_form_submit:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+.es_subscription_form .es_subscription_form_submit {
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+      border-top-color: transparent;
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.es_subscription_form .es_subscription_form_submit {
+  color: #fff;
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+  width: auto;
+}
+.es_subscription_message.success{
+  color: #fff !important;
+}
+
+#video .modal-dialog {
+  margin-top: 50vh;
+  transform: translateY(-50%);
 }
