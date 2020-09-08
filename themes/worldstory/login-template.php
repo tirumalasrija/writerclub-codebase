@@ -1,4 +1,3 @@
-
 <?php
 
 /**
@@ -51,7 +50,7 @@ if ( is_user_logged_in() ) {
 
             <form name="login_form" id="login_form" class="login_form">
 
-        <div class="d-flex justify-content-center mb-3 logo"><img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/Reg_Bingos_logo.png" alt="Italian Trulli"></div>
+        <div class="d-flex justify-content-center mb-3 logo"><img class="img-fluid" src="https://universitiesconnect.com/worldstory/wp-content/uploads/2020/08/BONGOS_WorldwideAdventures_Logo.png" alt="Italian Trulli"></div>
 
         <div class="d-flex flex-column">
 
@@ -304,88 +303,14 @@ if ( is_user_logged_in() ) {
 
 
 
-            success: function(data){
+            success: function(data){      
 
-
-
-
-
-
-
-                
-
-
-
-                if (data.loggedin == true){
-
-                  
-
-             swal({
-
-
-
-
-
-
-
-                                    title: "Thanks for Login",
-
-
-
-
-
-
-
-                                    text: '',
-
-
-
-
-
-
-
-                                      type: "success",
-
-
-
-
-
-
-
-                                    timer: 2000,
-
-
-
-
-
-
-
-                                    showCancelButton: false,
-
-
-
-
-
-
-
-                                    showConfirmButton: false
-
-
-
-
-
-
-
-                                  });
-
-
+                if (data.loggedin == true){          
 
                    window.location.href = "<?php echo site_url('story-feed'); ?>";
 
 
-
                 }else{
-
 
 
                   $('form#login_form p.status').html(data.message);

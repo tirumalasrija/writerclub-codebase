@@ -18,29 +18,41 @@ wp_redirect( site_url('login') );
 }
 
 ?>
+
+<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.2/semantic.min.css" />
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.2/semantic.min.js"></script>
+
+<div class="feed_bg">
 <div class="my-custom-class">
   <div class="container share_story_container pt-60">
-        <div class="row bg-white">
-      <div class="d-flex flex-column mb-2 mt-2 col-lg-12">
-            <div class="share_story">
+  <div class="row bg-white">
+      <div class="d-flex flex-column col-lg-12 mb-5">
+            <div class="share_story d-flex justify-content-between">
+           
                 <b class="story_feed"><a href="#" onclick="goBack()"><i class="fas fa-arrow-left"></i></a>&nbsp;share story</b>
+          
+            <div class="">
+            <div class="col-lg-4 mb-5" data-toggle="modal" data-target="#newgroup">
+            <div class="position-relative createGroupmodal" (click)="openModal()">
+              <div class="img_align d-flex">
+              
+               <div class="newgroup">Create New Group</div>
+               <div class="circlebg rounded-circle">
+                    <div class="circle">+</div>
+               </div></div>
+               
             </div>
-            <p class="mt-3 pl-4">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.</p>
+          </div> 
+             <!-- <button type="button" class="btn btn-warning gradient-button" data-target="#invitemember" data-toggle="modal">Invite New Member</button> -->
+            </div>
+          </div>
+            
         </div> 
         
         <div class="col-lg-12">
 
         <div class="row">
-          <div class="col-lg-4 mb-5" data-toggle="modal" data-target="#newgroup">
-            <div class="position-relative" (click)="openModal()">
-              <div class="img_align d-flex">
-               <div class="circlebg rounded-circle">
-                    <div class="circle">+</div>
-               </div>
-               <div class="newgroup">Create New Group</div></div>
-               
-            </div>
-          </div> 
+         
 
 
 <?php 
@@ -49,7 +61,7 @@ $args = array(
             'post_type' => 'usergroups',
             'author'        =>  $current_user->ID,
             'orderby'       =>  'post_date',
-            'order'         =>  'DSC',
+            'order'         =>  'ASC',
             'posts_per_page' => -1,
            
 );
@@ -57,17 +69,17 @@ $groups  = get_posts( $args );
 if($groups){
 foreach($groups as $group ) {
  $emailsall = get_post_meta($group->ID, 'email_gourp_members', true ); 
+ $finalemails = json_encode($emailsall);
 
 ?>
 
           <!--main-group start-->
-          <div class="col-lg-4 mb-5">
-            <div class="custom-control custom-checkbox">
+          <div class="col-lg-4 mb-5 mailscontainer">
+          <div class="custom-control custom-checkbox">
               <!-- <input type="checkbox" class="custom-control-input" id="customCheck1" checked=""> -->
               <input type="checkbox" name="sharestory"  class="custom-control-input sharestorycheck" value="<?php echo $group->ID; ?>">
               <label class="custom-control-label" for="customCheck1"></label>
             </div>
-               
             <div class="position-relative" (click)="openModal()">
               <div class="img_align d-flex">
                <div class="circlebg rounded-circle">
@@ -76,7 +88,18 @@ foreach($groups as $group ) {
                     </div>
                </div>
                <div class="newgroup list"><?php echo $group->post_title; ?></div>
-          
+                  <div class="dropdown group-info ">
+                  <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-ellipsis-v"></i>
+                  </button>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                   <a class="editopopup dropdown-item" href="#" data-id="<?php echo $group->ID; ?>" data-name="<?php echo $group->post_title; ?>" data-value='<?php echo $finalemails ?>' data-toggle="modal" data-target="#editGroup">
+                      <i class="edit"></i>
+                      Edit Group
+                    </a> 
+                    <a class="dropdown-item group-delete" data-id="<?= $group->ID ?>" href="#"><i class="delete-info"></i>Delete Group</a>
+                  </div>
+                </div>
                <div class="group">
                 <?php if($emailsall){  foreach($emailsall as $emailsigle) { ?>
                 <a title="<?= $emailsigle ?>"> <img src="https://universitiesconnect.com/worldstory/wp-content/uploads/2020/06/default_avatar.jpg" alt="member"></a>
@@ -88,13 +111,15 @@ foreach($groups as $group ) {
             </div>
           </div> 
       <?php } } ?>   
+
           
           
            
         </div>
 
+             
             <div class="d-flex justify-content-between col-lg-12 mt-5 mb-5 mfdc">
-              <button type="button" class="btn btn-warning invite-button" data-target="#invitemember" data-toggle="modal">Invite New Member</button>
+           
   <?php wp_nonce_field('vb_share_user','vb_share_user_nonce', true, true ); ?>
               <button type="button" class="btn btn-warning share-story-button sharestory-btn">Share</button>
 
@@ -103,9 +128,9 @@ foreach($groups as $group ) {
         
         </div>
     </div>
+    </div>
 </div>
-
-
+</div>
 <!-- <button class="btn btn-warning" data-toggle="modal" data-target="#editGroup">Edit Group</button>
 <button class="btn btn-warning" data-toggle="modal" data-target="#mapmodal">Select Country</button> -->
 <!--create New Group-->
@@ -124,56 +149,23 @@ foreach($groups as $group ) {
             <label for="recipient-name" class="col-form-label">Group Name <sup>*</sup></label>
             <input type="text" class="form-control" name="recipientname" id="recipientname" placeholder="Enter Group Name">
           </div>
-
-          <div class="form-group members-select">
-            <label for="selectmembers" class="col-form-label">Add Members <sup>*</sup></label>
-            <div class="dropdown members" id="selectmembers">
-              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
-              Select Members
-              </button>
-              <div class="dropdown-menu dropdownemails" multiple aria-labelledby="dropdownMenuButton" >
-                    <?php 
-            $single = true;
-            $user_id = get_current_user_id();
-            $key = 'mm_user_emails';
-            $user_eamils = get_user_meta($user_id, $key, $single);
-            if($user_eamils) {
-            foreach($user_eamils as $value) {
-            ?>
-
-                <div class="dropdown-item">
-                  <div class="form-check">
-                    <input class="form-check-input find-table" name="groupmembers" type="checkbox" id="find-table" value="<?= $value ?>">
-                    <label class="form-check-label" for="saisudhakar">
-                      <figure class="user-info group">
-                      <img src="https://universitiesconnect.com/worldstory/wp-content/uploads/2020/06/default_avatar.jpg" alt="user"/>
-                      <figcaption ><?= $value ?></figcaption>
-                      </figure>
-                    </label>
-                  </div>
-                </div>
-                <?php } 
-              }
-                ?>
-                             
-              </div>
-            </div>
-          </div>
-
-         <!--   <div class="added-members">
-              <div class="member">
-                <figure class="user-info group">
-              <img src="https://universitiesconnect.com/worldstory/wp-content/uploads/2020/06/default_avatar.jpg" alt="user"/>
-                  <figcaption >Balakarishana</figcaption>
-                  <button class="close" type="button">&times;</button>
-                </figure>
-              </div>
-            </div> -->
+        <?php       
+        $single = true;
+        $user_id = get_current_user_id();
+        $key = 'mm_user_emails';
+        $user_eamils = get_user_meta($user_id, $key, $single);
+        $emails= "'".implode('", "', $user_eamils)."'";
+          ?>
+					<div class="form-group">
+						<h4 for='example_emailSUI'>Add Members email addresses</h4>
+						<input type='text' id='find-table' name='groupmembers' placeholder="example@mail.com" name="groupmembers" type="checkbox" id="find-table"  class='form-control' value=''>
+					</div>				
+			
              <?php wp_nonce_field('vb_update_create','vb_update_create_nonce', true, true ); ?>
          <div class="modal-footer justify-content-between">
         
           <div class="mr-2 cancel" data-dismiss="modal">Cancel</div>
-          <div class="update"><button type="submit" class="btn btn-warning gradient-button create-group">Create</button></div>
+          <div class="update"><button type="button" class="btn btn-warning gradient-button create-group">Create</button></div>
         
       </div>
         </form>
@@ -196,61 +188,23 @@ foreach($groups as $group ) {
         </button>
       </div>
       <div class="modal-body">
-        <form name="allgroupname" id="allgroupname">
+        <form name="allgroupname1" id="allgroupname1">
           <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Group Name <sup>*</sup></label>
-            <input type="text" class="form-control" name="recipientname" id="recipientname" placeholder="Enter Group Name">
+            <label for="recipient-name" class="col-form-label">Group Name  <sup>*</sup></label>
+            <input type="text" class="form-control" name="recipientname1" id="recipientname1" >
+            <input type="hidden" class="form-control" name="groupidedit" id="groupidedit" >
+            
           </div>
-
-          <div class="form-group members-select">
-            <label for="selectmembers" class="col-form-label">Add Members <sup>*</sup></label>
-            <div class="dropdown members" id="selectmembers">
-              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
-              Select Members
-              </button>
-              <div class="dropdown-menu dropdownemails" multiple aria-labelledby="dropdownMenuButton" >
-                    <?php 
-            $single = true;
-            $user_id = get_current_user_id();
-            $key = 'mm_user_emails';
-            $user_eamils = get_user_meta($user_id, $key, $single);
-            if($user_eamils) {
-            foreach($user_eamils as $value) {
-            ?>
-
-                <div class="dropdown-item">
-                  <div class="form-check">
-                    <input class="form-check-input find-table" name="groupmembers" type="checkbox" id="find-table" value="<?= $value ?>">
-                    <label class="form-check-label" for="saisudhakar">
-                      <figure class="user-info group">
-                      <img src="https://universitiesconnect.com/worldstory/wp-content/uploads/2020/06/default_avatar.jpg" alt="user"/>
-                      <figcaption ><?= $value ?></figcaption>
-                      </figure>
-                    </label>
-                  </div>
-                </div>
-                <?php } 
-              }
-                ?>
-                             
-              </div>
-            </div>
-          </div>
-
-         <!--   <div class="added-members">
-              <div class="member">
-                <figure class="user-info group">
-              <img src="https://universitiesconnect.com/worldstory/wp-content/uploads/2020/06/default_avatar.jpg" alt="user"/>
-                  <figcaption >Balakarishana</figcaption>
-                  <button class="close" type="button">&times;</button>
-                </figure>
-              </div>
-            </div> -->
-             <?php wp_nonce_field('vb_update_create','vb_update_create_nonce', true, true ); ?>
+        	<div class="form-group">
+						<h4 for='example_emailSUI1'>Update Members email addresses</h4>
+						<input type='text' id='find-table1' name='groupmembers1' placeholder="example@mail.com"  type="checkbox" id="find-table1"  class='form-control' value=''>
+					</div>	
+    
+             <?php wp_nonce_field('vb_update_edit','vb_update_edit_nonce', true, true ); ?>
          <div class="modal-footer justify-content-between">
         
           <div class="mr-2 cancel" data-dismiss="modal">Cancel</div>
-          <div class="update"><button type="submit" class="btn btn-warning gradient-button create-group">Create</button></div>
+          <div class="update"><button type="button" class="btn btn-warning gradient-button update-group-sub">Update</button></div>
         
       </div>
         </form>
@@ -335,9 +289,7 @@ foreach($groups as $group ) {
   </div>
 </div>
 
-<!--select map-->
 
-  
     <script>
 function goBack() {
   window.history.back();
@@ -420,87 +372,131 @@ var shareId = "<?php echo (isset($_GET['share']))?($_GET['share']):''; ?>";
         
         });
 
-        $('#vmap').vectorMap({
-          map: 'world_en',
-          backgroundColor: '#fff',
-          color: '#ffffff',
-          hoverOpacity: 0.7,
-          selectedColor: '#666666',
-          enableZoom: false,
-          showTooltip: true,
-          scaleColors: ['#C8EEFF', '#006491'],
-          values: sample_data,
-          normalizeFunction: 'polynomial'
-        });
+   
       });
-    </script>
-
-
-<script>
-  
    var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
-   $(".create-group").click(function()
+   
+   $(".group-delete").click(function()
    {
+
+$groupId = $(this).attr("data-id");
+      swal({
+        title: "Are you sure?",
+        text: "Submit to delete this group",
+        type: "info",
+        showCancelButton: true,
+        closeOnConfirm: false,
+        showLoaderOnConfirm: true
+      }, function () {    
+
+           jQuery.ajax({
+                        type:"POST",
+                        dataType: 'json',
+                        url:ajaxurl,
+                        data: {
+                          action: "delete_group_writers", 
+                         groupid : $groupId,                                           
+
+                        },
+                        success: function(results){
+                          console.log(results);
+                          if(results.delete==true)
+                          {
+                               swal("Deleted!", results.message, "success");                        
+                             location.reload();                         
+                          //  $('form#login_form p.status').text(results.message);
+                          }else{
+                        swal("Failed!", results.message, "warning");     
+                          }   
+                        },
+                        error: function(results) {
+                            swal("Faild!", results.message, "warning");     
+                        }
+                      }); 
+       
+      });
+
+   });
+   $(".update-group-sub").click(function(event)
+   {
+    event.preventDefault();
+    $( "#allgroupname1" ).validate();
+    $('.update-group-sub').prop('disabled', true);
+
+           var reg_nonce1 = $('#vb_update_edit_nonce').val();
+          var recipientname1 = $("#recipientname1").val();
+      var groupid = $("#groupidedit").val();
+         var searchIDs1 =  $('#find-table1').val();
+
+             jQuery.ajax({
+
+                        type:"POST",
+
+                        dataType: 'json',
+
+                        url:ajaxurl,
+
+                        data: {
+
+                          action: "update_group_writers",                         
+                            nonce: reg_nonce1,
+                            groupid : groupid,
+                         recipientname : recipientname1,    
+                          searchIDs : searchIDs1,                      
+
+                        },
+
+                        success: function(results){
+
+                          console.log(results);
+
+                          if(results.create==true)
+
+                          {
+                             swal({
+
+                                        title: results.message,
+
+                                        text: 'Group Updated',
+
+                                          type: "success",
+
+                                        timer: 1000,
+
+                                        showCancelButton: false,
+
+                                        showConfirmButton: false
+
+                                      });                       
+                             location.reload();
+                         
+                           $('form#login_form p.status').text(results.message);
+
+                          }else{
+
+                       alert("error");
+
+                          }   
+
+                        },
+
+                        error: function(results) {
+
+                        }
+
+                      }); 
+
+   });
+   
+   $(".create-group").click(function(event)
+   {
+    event.preventDefault();
      $( "#allgroupname" ).validate();
-
-   })
-
-   $( "#allgroupname" ).validate( {
-
-        rules: {
-
-          recipientname: "required",
-
-        
-          "groupmembers[]": {
-            required: true,
-            minlength: 1
-          },
-        
-
-        },
-        messages: {
-
-          recipientname: "Please enter Group Name",  
-          "groupmembers[]" : "Please select atleast one member"
-
-        },
-
-        errorElement: "div",
-
-        errorPlacement: function ( error, element ) {
-          // Add the `help-block` class to the error element
-
-          error.addClass( "invalid-feedback" );
-
-          if ( element.prop( "type" ) === "checkbox" ) {
-
-            error.insertAfter( element.parent( "label" ) );
-
-          } else {
-            error.insertAfter( element );
-          }
-        },
-        highlight: function ( element, errorClass, validClass ) {
-
-          $( element ).addClass( "has-error" ).removeClass( "has-success" );
-
-        },
-
-        unhighlight: function (element, errorClass, validClass) {
-
-          $( element ).addClass( "has-success" ).removeClass( "has-error" );
-
-        },
-
-        submitHandler: function(form) {
-            $('.create-group').prop('disabled', true);
+     $('.create-group').prop('disabled', true);
            var reg_nonce = $('#vb_update_create_nonce').val();
           var recipientname = $("#recipientname").val();
       
-         var searchIDs =  $('.find-table:checkbox:checked').map(function(){
-                                return this.value;
-                            }).toArray();
+         var searchIDs =  $('#find-table').val();
 
              jQuery.ajax({
 
@@ -540,10 +536,10 @@ var shareId = "<?php echo (isset($_GET['share']))?($_GET['share']):''; ?>";
 
                                         showConfirmButton: false
 
-                                      });                         
+                                      });                       
                              location.reload();
                          
-                          //  $('form#login_form p.status').text(results.message);
+                           $('form#login_form p.status').text(results.message);
 
                           }else{
 
@@ -558,91 +554,11 @@ var shareId = "<?php echo (isset($_GET['share']))?($_GET['share']):''; ?>";
                         }
 
                       }); 
-      
-         
-      }
+   });
 
-    });
+ 
 
-  $(".invitemeber").click(function()
-  {
-    var invite = $("#recipient-email").val();
-    var html =   '<div class="member"><figure class="user-info group email-invites-cross"><figcaption >'+invite+'</figcaption><button class="close" type="button">&times;</button></figure></div>';
 
-     var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
-    if (testEmail.test(invite)) 
-    {
-      $('.invitemeber').prop('disabled', true);
-      $('.email-invites-cross').append(html);
-      $("#recipient-email").val('');
-        var reg_nonce = $('#vb_update_user_nonce').val();
-
-             jQuery.ajax({
-
-                        type:"POST",
-
-                        dataType: 'json',
-
-                        url:ajaxurl,
-
-                        data: {
-
-                          action: "update_user_member_emails",
-
-                          nonce: reg_nonce,
-
-                         invite : invite,                        
-
-                        },
-
-                        success: function(results){
-
-                          console.log(results);
-
-                          if(results.invite==true)
-
-                          {
-                            $('.invitemeber').prop('disabled', false);
-                            $(".dropdownemails").append('<div class="dropdown-item"><div class="form-check"><input class="form-check-input find-table" name="groupmembers" type="checkbox" id="find-table" value="'+results.value+'"><label class="form-check-label" for="saisudhakar"><figure class="user-info group"><img src="https://universitiesconnect.com/worldstory/wp-content/uploads/2020/06/default_avatar.jpg" alt="user"/><figcaption >'+results.value+'</figcaption></figure></label></div></div>');
-                             swal({
-
-                                        title: results.message,
-
-                                        text: 'Email added',
-
-                                          type: "success",
-
-                                        timer: 1000,
-
-                                        showCancelButton: false,
-
-                                        showConfirmButton: false
-
-                                      });                         
-
-                         
-                          //  $('form#login_form p.status').text(results.message);
-
-                          }else{
-
-                       alert("error");
-
-                          }   
-
-                        },
-
-                        error: function(results) {
-
-                        }
-
-                      }); 
-     
-    }
-    else{
-        alert('failed');
-    } 
-
-  });
 
 $(document).mouseup(function (e){
 
@@ -667,9 +583,193 @@ $('.members-select .dropdown-item').each(function(){
    // $('.added-members').append($(this).html())
   })  
 });
+$(function() {
+			//To render the input device to multiple email input using SemanticUI icon
+		//	$('#find-table').multiple_emails({theme: "SemanticUI"});
+    //  $('#find-table1').multiple_emails({theme: "SemanticUI"});
+			//Shows the value of the input device, which is in JSON format
+			$('#find-table').text($('#v').val());
+      $('#find-table1').text($('#v').val());
+			$('#find-table').change( function(){
+				$('#current_emailsSUI').text($(this).val());
+			});
+      $('#find-table1').change( function(){
+				$('#current_emailsSUI1').text($(this).val());
+			});
+      $(".multiple_emails-input").attr("placeholder", "Enter Email Id");
+   
+		});
+    $(document).on("click", ".createGroupmodal", function () {
+      $('#find-table').multiple_emails({theme: "SemanticUI"});
+      $(".multiple_emails-input").attr("placeholder", "Enter Email Id");
+    });
+    
+    $(document).on("click", ".editopopup", function () {
+      $("#find-table1").val('');
+      $(".multiple_emails-container").remove();
+datavalue = $(this).attr("data-value");
+dataname = $(this).attr("data-name");
+dataid = $(this).attr("data-id");
+$("#recipientname1").val(dataname);
+$("#groupidedit").val(dataid);
+$("#find-table1").val(datavalue);
+$('#find-table1').multiple_emails({theme: "SemanticUI"});
 
+    });
+    
+    (function( $ ){
+
+$.fn.multiple_emails = function(options) {
+
+    // Default options
+    var defaults = {
+        checkDupEmail: true,
+        theme: "Bootstrap",
+        position: "top"
+    };
+
+    // Merge send options with defaults
+    var settings = $.extend( {}, defaults, options );
+
+    var deleteIconHTML = "";
+    if (settings.theme.toLowerCase() == "Bootstrap".toLowerCase())
+    {
+        deleteIconHTML = '<a href="#" class="multiple_emails-close" title="Remove"><span class="glyphicon glyphicon-remove"></span></a>';
+    }
+    else if (settings.theme.toLowerCase() == "SemanticUI".toLowerCase() || settings.theme.toLowerCase() == "Semantic-UI".toLowerCase() || settings.theme.toLowerCase() == "Semantic UI".toLowerCase()) {
+        deleteIconHTML = '<a href="#" class="multiple_emails-close" title="Remove"><i class="remove icon"></i></a>';
+    }
+    else if (settings.theme.toLowerCase() == "Basic".toLowerCase()) {
+        //Default which you should use if you don't use Bootstrap, SemanticUI, or other CSS frameworks
+        deleteIconHTML = '<a href="#" class="multiple_emails-close" title="Remove"><i class="basicdeleteicon">Remove</i></a>';
+    }
+
+    return this.each(function() {
+        //$orig refers to the input HTML node
+        var $orig = $(this);
+        var $list = $('<ul class="multiple_emails-ul" />'); // create html elements - list of email addresses as unordered list
+
+        if ($(this).val() != '' && IsJsonString($(this).val())) {
+            $.each(jQuery.parseJSON($(this).val()), function( index, val ) {
+                $list.append($('<li class="multiple_emails-email"><span class="email_name" data-email="' + val.toLowerCase() + '">' + val + '</span></li>')
+                  .prepend($(deleteIconHTML)
+                       .click(function(e) { $(this).parent().remove(); refresh_emails(); e.preventDefault(); })
+                  )
+                );
+            });
+        }
+
+        var $input = $('<input type="text" class="multiple_emails-input text-left" placeholder="Friend\'s Email" />').on('keyup', function(e) { // input
+            $(this).removeClass('multiple_emails-error');
+            var input_length = $(this).val().length;
+
+            var keynum;
+            if(window.event){ // IE
+                keynum = e.keyCode;
+            }
+            else if(e.which){ // Netscape/Firefox/Opera
+                keynum = e.which;
+            }
+
+            //if(event.which == 8 && input_length == 0) { $list.find('li').last().remove(); } //Removes last item on backspace with no input
+
+            // Supported key press is tab, enter, space or comma, there is no support for semi-colon since the keyCode differs in various browsers
+            if(keynum == 9 || keynum == 32 || keynum == 188) {
+                display_email($(this), settings.checkDupEmail);
+            }
+            else if (keynum == 13) {
+                display_email($(this), settings.checkDupEmail);
+                //Prevents enter key default
+                //This is to prevent the form from submitting with  the submit button
+                //when you press enter in the email textbox
+                e.preventDefault();
+            }
+
+        }).on('blur', function(event){
+            if ($(this).val() != '') { display_email($(this), settings.checkDupEmail); }
+        });
+
+        var $container = $('<div class="multiple_emails-container" />').click(function() { $input.focus(); } ); // container div
+
+        // insert elements into DOM
+        if (settings.position.toLowerCase() === "top")
+            $container.append($list).append($input).insertAfter($(this));
+        else
+            $container.append($input).append($list).insertBefore($(this));
+
+        /*
+        t is the text input device.
+        Value of the input could be a long line of copy-pasted emails, not just a single email.
+        As such, the string is tokenized, with each token validated individually.
+
+        If the dupEmailCheck variable is set to true, scans for duplicate emails, and invalidates input if found.
+        Otherwise allows emails to have duplicated values if false.
+        */
+        function display_email(t, dupEmailCheck) {
+
+            //Remove space, comma and semi-colon from beginning and end of string
+            //Does not remove inside the string as the email will need to be tokenized using space, comma and semi-colon
+            var arr = t.val().trim().replace(/^,|,$/g , '').replace(/^;|;$/g , '');
+            //Remove the double quote
+            arr = arr.replace(/"/g,"");
+            //Split the string into an array, with the space, comma, and semi-colon as the separator
+            arr = arr.split(/[\s,;]+/);
+
+            var errorEmails = new Array(); //New array to contain the errors
+
+            var pattern = new RegExp(/^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i);
+
+            for (var i = 0; i < arr.length; i++) {
+                //Check if the email is already added, only if dupEmailCheck is set to true
+                if ( dupEmailCheck === true && $orig.val().indexOf(arr[i]) != -1 ) {
+                    if (arr[i] && arr[i].length > 0) {
+                        new function () {
+                            var existingElement = $list.find('.email_name[data-email=' + arr[i].toLowerCase().replace('.', '\\.').replace('@', '\\@') + ']');
+                            existingElement.css('font-weight', 'bold');
+                            setTimeout(function() { existingElement.css('font-weight', ''); }, 1500);
+                        }(); // Use a IIFE function to create a new scope so existingElement won't be overriden
+                    }
+                }
+                else if (pattern.test(arr[i]) == true) {
+                    $list.append($('<li class="multiple_emails-email"><span class="email_name" data-email="' + arr[i].toLowerCase() + '">' + arr[i] + '</span></li>')
+                          .prepend($(deleteIconHTML)
+                               .click(function(e) { $(this).parent().remove(); refresh_emails(); e.preventDefault(); })
+                          )
+                    );
+                }
+                else
+                    errorEmails.push(arr[i]);
+            }
+            // If erroneous emails found, or if duplicate email found
+            if(errorEmails.length > 0)
+                t.val(errorEmails.join("; ")).addClass('multiple_emails-error');
+            else
+                t.val("");
+            refresh_emails ();
+        }
+
+        function refresh_emails () {
+            var emails = new Array();
+            var container = $orig.siblings('.multiple_emails-container');
+            container.find('.multiple_emails-email span.email_name').each(function() { emails.push($(this).html()); });
+            $orig.val(JSON.stringify(emails)).trigger('change');
+        }
+
+        function IsJsonString(str) {
+            try { JSON.parse(str); }
+            catch (e) { return false; }
+            return true;
+        }
+
+        return $(this).hide();
+
+    });
+
+};
+
+})(jQuery);
+   
 </script>
 
 
 <?php get_footer(); ?>
-

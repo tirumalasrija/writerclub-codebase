@@ -19,7 +19,7 @@ $current_cat_id = (isset($_GET['cat'])?$_GET['cat']:'');
 
 ?>
 
-
+<div class="feed_bg">
 
 <div class="container">
 
@@ -96,6 +96,7 @@ foreach($allcat as $value) { ?>
 
     </div>
 
+</div>
 </div>
 
 <?php get_footer(); ?>
