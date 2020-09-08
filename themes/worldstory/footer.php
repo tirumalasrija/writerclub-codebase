@@ -12,7 +12,28 @@
  */
 
 ?>
-		<!-- Footer -->
+    <!-- Modal -->
+<div class="modal fade" id="video" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+     <!-- <video width="100%" height="420" controls autoplay="false">
+        <source src="<?php echo get_template_directory_uri(); ?>/assets/homepage_vid.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>  -->
+        
+      </div>
+      
+    </div>
+  </div>
+</div>		
+<!-- Footer -->
 <footer class="page-footer font-small mdb-color pt-4 footer-bg">
 
   <!-- Footer Links -->
@@ -99,22 +120,7 @@
     </div>
     <!-- Footer links -->
 
-    <!-- Modal -->
-<div class="modal fade" id="video" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      
-      <div class="modal-body">
-      <video width="100%" height="420" controls autoplay="true">
-        <source src="<?php echo get_template_directory_uri(); ?>/assets/homepage_vid.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-      </video> 
-        
-      </div>
-      
-    </div>
-  </div>
-</div>
+
    
 
   </div>
@@ -149,9 +155,20 @@
     <?php wp_footer(); ?>
     
     <script>
-      document.addEventListener("DOMContentLoaded", function(){
+     /* document.addEventListener("DOMContentLoaded", function(){
         $("#video").modal('show');
-      });
+      }); */
+		   $(document).ready(function(){
+            setTimeout(function(){
+            if(!Cookies.get('modalShown')) {
+                $("#video").modal('show');
+              Cookies.set('modalShown', true);
+            } else {
+               // alert('Your modal won\'t show again as it\'s shown before.');
+            }
+
+    },3000);
+ });
       
     </script>
 

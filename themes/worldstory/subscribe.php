@@ -8,10 +8,6 @@
 get_header();
 
 ?>
-<style>
-input.form-check-input { opacity:0;
-	}
-</style>
 <div class="container">
 
     <div class="row justify-content-around direction-column">

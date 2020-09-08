@@ -4,6 +4,12 @@
   src: url(../fonts/Chewy-Regular.ttf);
 }
 
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .navbar-dark .navbar-brand img {width:51px;}
 .bg-white {
     background-color: #fff!important;
@@ -1067,7 +1073,7 @@ body.bg-none{background: none !important;}.bd-highlight{padding-left:5%}
 }
 .footer-bg{
     /* background: #A9D7E1; */
-    background: #38B6D2;
+    background: #a9dddb;
 }
 
 /* Date picker Styles */
@@ -2709,4 +2715,21 @@ img.img-fluid.no-story {
 #video .modal-dialog {
   margin-top: 50vh;
   transform: translateY(-50%);
+}
+
+.how_it_work_container{
+  background-image: url(../assets/howitworks_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.img_cat{
+  width: 30px !important;
+}
+.page-footer{
+  margin-top: auto;
+}
+.feed_bg{
+  background-image: url('../assets/feed_bg.png');
+  background-size: contain;
+  background-repeat: repeat;
 }

@@ -10,7 +10,6 @@ $k= array_rand($colors)
                   <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="fas fa-ellipsis-v"></i>
                   </button>
-	   <?php if ( is_user_logged_in() ) { ?>
                   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                 -  <a class="dropdown-item" href="<?php echo site_url('edit-story'); ?>?gpp_action=edit&gpp_id=<?= $id ?>" >
                       <i class="edit"></i>
@@ -18,7 +17,6 @@ $k= array_rand($colors)
                     </a> 
                     <a class="dropdown-item group-delete" data-id="<?php echo get_the_ID(); ?>" href="#"><i class="delete-info"></i>Delete Story</a>
                   </div>
-	   <?php } ?>
                 </div>           
 
                       <?php  
@@ -34,7 +32,7 @@ $k= array_rand($colors)
   <?php } ?>
 
                 <div class="img-content img-content-center shadow">
-
+                    
                     <h5><b><?php echo get_the_title(); ?></b></h5>
 
                     <p>
@@ -56,7 +54,10 @@ echo wp_trim_words( get_the_content(), 20, '...' );
 
                     </p>
 
-                    <div class="d-flex justify-content-between">
+                    <span><img class="img_cat" src="<?php echo get_template_directory_uri(); ?>/assets/fiction.png" alt=""> Fiction</span>
+
+
+                    <div class="d-flex justify-content-between align-items-center mt-3">
 
                         <div class="d-flex">
 
@@ -75,6 +76,7 @@ echo wp_trim_words( get_the_content(), 20, '...' );
                             </div>
 
                         </div>
+
 
                         <div class="read">
 

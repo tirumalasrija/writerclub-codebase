@@ -1,5 +1,4 @@
 
-
 <?php
 
 /**
@@ -52,7 +51,7 @@ if ( is_user_logged_in() ) {
 
                     <div class="d-flex justify-content-center mb-3 logo">
 
-                        <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/Reg_Bingos_logo.png" alt="Italian Trulli">
+                        <img class="img-fluid" src="https://universitiesconnect.com/worldstory/wp-content/uploads/2020/08/BONGOS_WorldwideAdventures_Logo.png" alt="Italian Trulli">
 
                     </div>
 

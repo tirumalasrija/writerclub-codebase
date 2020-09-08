@@ -40,12 +40,16 @@ get_header(); ?>
 
          
         </div>
+
+    </div>
 <!--explaining purpose of website-->
  <!--explaining purpose of website-->
-        <div class="epow bg-white">
-           <div class="d-flex flex-column flex-sm-column flex-md-row">
+        <div class="epow bg-whit mb-5">
+            <div class="container">
+            <h3 class="text-center mb-3"><strong>Who We Are</strong></h3>
+           <div class="d-flex flex-column flex-sm-column flex-md-row align-items-center">
                 <div class="col-md-6">
-                  <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/bottomimage.jpg" alt="banner_bottom"/>
+                  <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/bottomimage.png" alt="banner_bottom"/>
                 </div>
                 <div class="col-md-6">
                 <p>Hello Friends!</p>
@@ -53,53 +57,18 @@ get_header(); ?>
                 <a class="login active " href="<?php echo site_url('write-a-story'); ?> " title="startwriting">Start Writing</a>
                 </div>
            </div>
+           </div>
         </div>
-        <div class="agile bg-white pl-3 pr-3">
-        <div class="row">
-           <?php  if ( !is_user_logged_in() ) { ?>
-            <div class="col-md-6">
-               <a href="<?php echo site_url('register'); ?>" target="_blank" title="Register with your email address">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/RegisgterOnline-01.jpeg" alt="img" class="img-fluid"/>
-                    <div class="fig_caption">
-                        <p>Register with your email address</p>
-                    </div>
-                </a>
-            </div>
-            <?php } ?>
-            <div class="col-md-6">
-                 <a href="<?php echo ( !is_user_logged_in() )? site_url('register'): site_url('write-a-story'); ?>" target="_blank" title="Write your very own story">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/WriteAndPhoto-01.jpeg" alt="img" class="img-fluid"/>
-                <div class="fig_caption">
-                    <p>Write your very own story and upload a photo to go with it.</p>
-                </div>
-                </a>
-            </div>
-            <div class="col-md-6">
-                 <a href="<?php echo ( !is_user_logged_in() )? site_url('register'): site_url('story-feed'); ?>" target="_blank" title="Publish and share your work with other club members">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/PublishShare-01.jpeg" alt="img" class="img-fluid"/>
-                <div class="fig_caption">
-                    <p>Publish and share your work with other club members, family and friends</p>
-                </div>
-                </a>
-            </div>
-            <div class="col-md-6">
-                 <a href="<?php echo ( !is_user_logged_in() )? site_url('register'): site_url('my-stories'); ?>" target="_blank" title="Turn your published work into a memorable gift">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/MemorableGift-01.jpeg" alt="img" class="img-fluid"/>
-                <div class="fig_caption">
-                    <p>Turn your published work into a memorable gift.</p>
-                </div>
-                </a>
-            </div>
-        </div>
-        </div>
+
+    <div class="container">
         <!-- Map -->
 
         <div class="d-flex flex-column align-items-center map_container">
- <?php if(!is_user_logged_in()) { ?>
+        <?php if(!is_user_logged_in()) { ?>
                 <h2 class="heading">Writers All Around the World</h2>
-<?php }else{ ?>
-   <h2 class="heading">Writers All Around the World login</h2>
-<?php } ?>
+        <?php }else{ ?>
+        <h2 class="heading">Writers All Around the World login</h2>
+        <?php } ?>
         <div id="vmap" style="width:100%; height: 400px;">
              <div class="info-link">
           <p>Search Worldwide Storytellers and <br>
@@ -107,158 +76,95 @@ get_header(); ?>
          </div>
         </div>
 
+    </div>
+
+</div>
+
+    <!-- How it Works -->
+    <div class="how_it_work_container">
+        <div class="container">
+            <div class="d-flex flex-column align-items-center col-12">
+
+                <h2 class="heading">How It Works</h2>
+
+                    <div class="d-flex flex-row justify-content-center flex-wrap pb-5">
+
+                        <div class="row justify-content-center">
+                            
+                            <div class="col-sm-5 col-12">
+                                <div class="img">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/RegisgterOnline-01.jpeg" alt="img" class="img-fluid"/>
+                                    
+                                </div>
+
+                                    <div class="oneimg"><img src="<?php echo get_template_directory_uri(); ?>/assets/one.jpg" class="img-fluid"/></div>
+
+                                    <h5>Register with your email address</h5>
+
+                            </div>
+
+                        <div class="col-sm-5 col-12">
+                                <div class="img">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/WriteAndPhoto-01.jpeg" alt="img" class="img-fluid"/>
+                                </div>
+
+                                    <div class="oneimg"><img src="<?php echo get_template_directory_uri(); ?>/assets/two.jpg" class="img-fluid"/></div>
+
+                                    <h5>Write your very own story and upload a photo to go with it.</h5>
+
+                            </div>
+
+                            <div class="col-sm-5 col-12">
+                                <div class="img">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/PublishShare-01.jpeg" alt="img" class="img-fluid"/>
+                                </div>
+
+                                    <div class="oneimg"><img src="<?php echo get_template_directory_uri(); ?>/assets/three.jpg" class="img-fluid"/></div>
+
+                                    <h5>Publish and share your work with other club members, family and friends</h5>
+
+                            </div>
+
+                            <div class="col-sm-5 col-12">
+                                    <div class="img">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/MemorableGift-01.jpeg" alt="img" class="img-fluid"/>
+                                    </div>
+
+                                    <div class="oneimg"><img src="<?php echo get_template_directory_uri(); ?>/assets/four.jpg" class="img-fluid"/></div>
+
+                                    <h5>Turn your published work into a memorable gift.</h5>
+
+                                
+
+                            </div> 
+
+                        </div>
+
+                    </div> 
+
+            </div>
+        </div>
+        </div>
+
+    </div>
+
+
         
-
-        <!-- How it Works -->
-
-       <!-- <div class="d-flex flex-column align-items-center how_it_work_container col-12">
-
-            <h2 class="heading">Writers All Around the World</h2>
-
-                <div class="d-flex flex-row justify-content-center flex-wrap pb-5">
-
-                    <div class="row justify-content-center">
-
-
-
-
-
- <?php $allcat=get_categories(array( 'exclude'  => array(1),'number' => 4, 'hide_empty' =>false,'orderby' => 'name','order' => 'ASC',));
-
-$taxonomy="category";
-
-$i=0;
-
-foreach($allcat as $value)
-
-{
-
-  $valueapla = '';
-
-  if($i==0)
-
-  {
-
-  $valueapla='one';
-
-  }else if($i==1)
-
-  {
-
-  $valueapla='two';
-
-  }else if($i==2)
-
-  {
-
-  $valueapla='three';
-
-  }else {
-
-  $valueapla='four';
-
-  }
-
-
-
- ?>
-
-
-
-                        <div class="col-sm-5 col-12">
-
-                        
-
-                                <div class="img"><a href="<?php echo  site_url('story-feed'); ?>?cat=<?= $value->term_id ?>"><img src="<?php echo get_field('category_image',$taxonomy . '_' . $value->term_id); ?>" class="img-fluid"/></a></div>
-
-                                <div class="oneimg"><img src="<?php echo get_template_directory_uri(); ?>/assets/<?php echo  $valueapla; ?>.jpg" class="img-fluid"/></div>
-
-                               <a href="<?php echo  site_url('story-feed'); ?>?cat=<?= $value->term_id ?>"> <h5><?php echo $value->name; ?></h5></a>
-
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-
-                            
-
-                        </div>
-
-
-
-                      <?php $i++; }   ?>
-
-
-
-                      <!--  <div class="col-sm-5 col-12">
-
-                            
-
-                                <div class="img"><img src="<?php echo get_template_directory_uri(); ?>/assets/how_to_work_2.jpg" class="img-fluid"/></div>
-
-                                <div class="oneimg"><img src="<?php echo get_template_directory_uri(); ?>/assets/two.jpg" class="img-fluid"/></div>
-
-                                <h5>Real World Wide Stories</h5>
-
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-
-                            
-
-                        </div>
-
-
-
-                        <div class="col-sm-5 col-12">
-
-                            
-
-                                <div class="img"><img src="<?php echo get_template_directory_uri(); ?>/assets/how_to_work_3.jpg" class="img-fluid"/></div>
-
-                                <div class="oneimg"><img src="<?php echo get_template_directory_uri(); ?>/assets/three.jpg" class="img-fluid"/></div>
-
-                                <h5>Read and write on Any Device</h5>
-
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-
-                            
-
-                        </div>
-
-
-
-                        <div class="col-sm-5 col-12">
-
-                        
-
-                                <div class="img"><img src="<?php echo get_template_directory_uri(); ?>/assets/how_to_work_3.jpg" class="img-fluid"/></div>
-
-                                <div class="oneimg"><img src="<?php echo get_template_directory_uri(); ?>/assets/four.jpg" class="img-fluid"/></div>
-
-                                <h5>Order the Books</h5>
-
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-
-                            
-
-                        </div> 
-
-                    </div>
-
-                </div> 
-
-        </div> -->
-
         <!-- Write Your Heart Out -->
 
-        <div class="d-flex flex-row align-items-center write_your_container col-12">
-
-            <div class="row">
-
+        <div class="align-items-center write_your_container">
+            <div class="container">
+                <div class="row">
+                
                 <div class="col-sm-5 col-12 pl-5 ho">
 
-                   <!-- <h5 class="heading">Write Your Heart Out</h5> -->
-
-                    <p> <a href="<?php echo ( !is_user_logged_in() )? site_url('register'): site_url('write-a-story'); ?>" class="btn btn-secondary white_button">Write Your Heart Out <br>Get started!</a></p>
+                   <h5 class="heading">Write Your Heart Out</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio dolorem molestias eveniet sunt incidunt architecto voluptates, non rerum expedita quibusdam.</p>
+                    <p> <a href="<?php echo ( !is_user_logged_in() )? site_url('register'): site_url('write-a-story'); ?>" class="btn btn-secondary white_button">Subscribe Now</a></p>
 
                    
 
+                </div>
                 </div>
 
                 <!-- <div class="col-6"><img src="/<?php echo get_template_directory_uri(); ?>/assets/writing_bg.jpg" class="img-fluid"/></div> -->
@@ -267,9 +173,7 @@ foreach($allcat as $value)
 
         </div>
 
-    </div>
-
-</div>
+   
 
 
 

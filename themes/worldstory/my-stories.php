@@ -28,6 +28,7 @@ if ( !is_user_logged_in() ) {
 wp_enqueue_style('gpp-style');
 ?>
 
+<div class="feed_bg">
 <div class="container">
 
     <div class="spacer">
@@ -39,7 +40,7 @@ wp_enqueue_style('gpp-style');
         
 
         </div>
-<div><div id="gpp-message"></div></div>
+	<div><div id="gpp-message"></div></div>
         <div class="d-flex flex-wrap flex-row row">
 
 
@@ -85,6 +86,7 @@ wp_enqueue_style('gpp-style');
 
     </div>
 
+</div>
 </div>
 <?php wp_nonce_field('gppnonce_delete_action', 'gppnonce_delete'); ?>
 

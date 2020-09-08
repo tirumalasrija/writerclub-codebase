@@ -698,6 +698,44 @@ function mm_custom_post_custom_education()
 
     register_post_type('usergroups', $args);
 }
+add_action('wp_ajax_update_group_writers', 'update_group_writers');
+
+add_action('wp_ajax_nopriv_update_group_writers', 'update_group_writers');
+
+function update_group_writers() {
+    
+  if( !isset( $_POST['nonce'] ) || !wp_verify_nonce( $_POST['nonce'], 'vb_update_edit' ) )
+
+  die( 'Ooops, something went wrong, please try again later.' );  
+
+     $recipientname = stripcslashes($_POST['recipientname']); 
+
+     $searchIDs = json_decode(stripslashes($_POST['searchIDs'])); 
+  $groupId = stripcslashes($_POST['groupid']);
+ 
+   
+      if($groupId)
+      {
+            update_post_meta( $groupId, 'email_gourp_members',  $searchIDs ); 
+          // Update post 37
+            $my_post = array(
+                'ID'           => $groupId,
+                'post_title'   => $recipientname,               
+            );
+
+            // Update the post into the database
+            wp_update_post( $my_post );
+     
+
+       echo json_encode( array( 'create'=>true,'message'=>"User group Updated"));
+       die();
+     }else{
+
+      echo json_encode( array( 'create'=>false,'message'=>"fail"));
+       die();
+        
+     }
+}
 
 add_action('wp_ajax_create_group_writers', 'create_group_writers');
 
@@ -714,8 +752,9 @@ function create_group_writers() {
 
        $recipientname = stripcslashes($_POST['recipientname']); 
 
-       $searchIDs = $_POST['searchIDs']; 
-       
+       $searchIDs = json_decode(stripslashes($_POST['searchIDs'])); 
+    
+     
        $new_post = array(
       'post_title'     => $recipientname,        
       'post_type'      => 'usergroups',  
@@ -982,4 +1021,21 @@ function wpb_custom_billing_fields( $fields = array() ) {
 	unset($fields['billing_country']);
 
 	return $fields;
+}
+add_filter('woocommerce_get_price', 'woocommerce_change_price_by_addition', 10, 2);
+
+function woocommerce_change_price_by_addition($price, $product) {
+	
+	//global post object & post id
+     global $post;
+	 $post_id = $post->ID;
+	 
+	 //get the product 
+    $product = wc_get_product( $post_id );
+   
+   // change the price by adding the 35 
+    $price = ($price + 35);
+	
+	//return the new price
+    return  $price;
 }
