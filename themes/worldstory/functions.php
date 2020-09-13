@@ -697,6 +697,69 @@ function mm_custom_post_custom_education()
 
 
     register_post_type('usergroups', $args);
+    
+    $labels = array(
+
+      'name'               => __('Blogs'),
+      
+      'singular_name'      => __('Blog'),
+      
+      'add_new'            => __('Add New Blog'),
+      
+      'add_new_item'       => __('Add New Blog'),
+      
+      'edit_item'          => __('Edit Blog'),
+      
+      'new_item'           => __('New Blog'),
+      
+      'all_items'          => __('All Blog'),
+      
+      'view_item'          => __('View Blogs'),
+      
+      'search_items'       => __('Search Blogs'),
+      
+      
+      
+      );
+      
+      
+      
+          // The arguments for our post type, to be entered as parameter 2 of register_post_type()
+      
+      
+      
+          $args = array(
+      
+      'labels'            => $labels,
+      
+      'description'       => '',
+      
+      'public'            => true,
+      
+      
+      
+      'show_ui'            => true,
+      
+      
+       'menu_position' => 10,
+      
+      
+      'supports'          => array( 'title', 'editor', 'thumbnail','custom-fields' ),
+      
+      'has_archive'       => true,
+      
+      'show_in_admin_bar' => true,
+      
+      'show_in_nav_menus' => true,
+      'show_in_rest' => true,
+
+      'query_var'         => true,
+      
+      );
+      
+      
+      
+          register_post_type('blogs', $args);
 }
 add_action('wp_ajax_update_group_writers', 'update_group_writers');
 

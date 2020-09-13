@@ -5,32 +5,16 @@ $k= array_rand($colors)
    ?>
 
   <div class="position-relative imgs col-sm-6 col-12 gpp-row">
-  <?php if(is_page( 'my-stories' ))
-  { ?>
-   <div class="dropdown group-info ">
-                  <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="fas fa-ellipsis-v"></i>
-                  </button>
 
-                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                -  <a class="dropdown-item" href="<?php echo site_url('edit-story'); ?>?gpp_action=edit&gpp_id=<?= $id ?>" >
-                      <i class="edit"></i>
-                      Edit Story
-                    </a> 
-                    <a class="dropdown-item group-delete" data-id="<?php echo get_the_ID(); ?>" href="#"><i class="delete-info"></i>Delete Story</a>
-                  </div>
-                </div>           
-  <?php } ?>
+       
+
                       <?php  
-                        $category = get_the_terms( $post->ID, 'category' );
-                        $taxonomy="category";
                       if ( has_post_thumbnail() ) {
   echo get_the_post_thumbnail( get_the_ID(), 'medium', array( 'class' =>$colors[$k] ) );
-  }else{
-    
+  }else{   
    
     ?>
-      <img class="<?= $colors[$k] ?>"  src="<?php echo get_field('category_image',$taxonomy . '_' . $category[0]->term_id); ?>" />
+    
   
   <?php } ?>
 
@@ -39,7 +23,8 @@ $k= array_rand($colors)
                     <h5><b><?php echo get_the_title(); ?></b></h5>
 
                     <p>
-                      <?php  
+
+                    <?php  
 
 echo wp_trim_words( get_the_content(), 20, '...' );
  $author_id=$post->post_author;
@@ -52,9 +37,11 @@ echo wp_trim_words( get_the_content(), 20, '...' );
     } else {
        $postprofileurl = "https://worldwidestorytellers.com/wp-content/uploads/2020/06/default_avatar.jpg";
     }
- ?> </p>
+ ?>
 
-                    <span><img class="img_cat" src="<?php echo get_field('category_image',$taxonomy . '_' . $category[0]->term_id); ?>" alt=""> <?= $category[0]->name ?></span>
+                    </p>
+
+                  
 
 
                     <div class="d-flex justify-content-between align-items-center mt-3">
@@ -69,7 +56,7 @@ echo wp_trim_words( get_the_content(), 20, '...' );
 
                             <div class="user_name">
 
-                                <p> <?php the_author(); ?> </p>
+                                <p><?php the_author(); ?></p>
 
                                 <p class="auther">Author</p>
 
@@ -90,17 +77,7 @@ echo wp_trim_words( get_the_content(), 20, '...' );
 
                     </div>
 
-                    <div class="social-icons d-flex">
-
-
-
-                        <small class="likes mr-3"><i class="fas fa-heart mr-1"></i> <?php if(function_exists('the_views')) { the_views(); } ?></small>
-
-                     
-
-    <small class="share"><a href="<?php echo site_url('share-story'); ?>?share=<?php echo $post->ID; ?>"><i class="fas fa-share-alt"></i></a></small>
-
-                    </div>
+                
 
                 </div>
 

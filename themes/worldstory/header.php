@@ -101,13 +101,16 @@ if(is_front_page())
 
                 <ul  class="d-flex navbar-nav ml-auto">
                     <li  class="nav-item"><a  class="nav-link"  href="<?php echo site_url('home'); ?>">Home</a></li>
+                    <li  class="nav-item"><a  class="nav-link " href="<?php echo site_url('blog'); ?>">Blog</a></li>
                     <li  class="nav-item"><a  class="nav-link " href="<?php echo site_url('story-feed'); ?>">Story Feed</a></li>
+              
                     <?php if($logged==false) { ?>
                    <li  class="login_one nav-item"><a  class="login active" href="<?php echo site_url('login'); ?>">Login</a></li>
                     <li  class="login_one nav-item"><a  class="login active" href="<?php echo site_url('register'); ?>">Register</a></li>
                   
                    <?php }else { ?>
                        <li  class="nav-item"><a  class="nav-link " href="<?php echo site_url('my-stories'); ?>">My Stories</a></li>
+                      
                     <li  class="login_one nav-item login-spl"><a  class="login active" href="<?php echo site_url('write-a-story'); ?>">Write a Story</a></li>
                     <li  class="nav-item user-pic"><a href="#" class=""><img src="<?= $profileurl; ?>"></a></li>
                     <li class="nav-item drop-ellipse">

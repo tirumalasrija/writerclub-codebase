@@ -25,7 +25,7 @@
       <div class="modal-body">
      <!-- <video width="100%" height="420" controls autoplay="false">
         <source src="<?php echo get_template_directory_uri(); ?>/assets/homepage_vid.mp4" type="video/mp4">
-      Your browser does not support the video tag.
+     Your browser does not support the video tag.
       </video>  -->
         
       </div>

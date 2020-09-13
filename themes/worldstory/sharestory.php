@@ -32,11 +32,11 @@ wp_redirect( site_url('login') );
                 <b class="story_feed"><a href="#" onclick="goBack()"><i class="fas fa-arrow-left"></i></a>&nbsp;share story</b>
           
             <div class="">
-            <div class="col-lg-4 mb-5" data-toggle="modal" data-target="#newgroup">
-            <div class="position-relative createGroupmodal" (click)="openModal()">
+            <div class="col-lg-12 mb-5" data-toggle="modal" data-target="#newgroup">
+            <div class=" createGroupmodal" (click)="openModal()">
               <div class="img_align d-flex">
               
-               <div class="newgroup">Create New Group</div>
+               <div class="">Create New Group</div>
                <div class="circlebg rounded-circle">
                     <div class="circle">+</div>
                </div></div>
@@ -74,7 +74,7 @@ foreach($groups as $group ) {
 ?>
 
           <!--main-group start-->
-          <div class="col-lg-4 mb-5 mailscontainer">
+          <div class="col-lg-4 mb-5 mailscontainer editopopup" data-id="<?php echo $group->ID; ?>" data-name="<?php echo $group->post_title; ?>" data-value='<?php echo $finalemails ?>' data-toggle="modal" data-target="#editGroup">
           <div class="custom-control custom-checkbox">
               <!-- <input type="checkbox" class="custom-control-input" id="customCheck1" checked=""> -->
               <input type="checkbox" name="sharestory"  class="custom-control-input sharestorycheck" value="<?php echo $group->ID; ?>">

@@ -22,7 +22,7 @@ get_header();
             <form name="subscribe_form" id="subscribe_form" class="subscribe_form">
 
                 <div class="d-flex justify-content-center mb-3 logo">
-                  <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/Reg_Bingos_logo.png" alt="Italian Trulli">
+                  <img class="img-fluid" src="https://universitiesconnect.com/worldstory/wp-content/uploads/2020/08/BONGOS_WorldwideAdventures_Logo.png" alt="Italian Trulli">
                 </div>
 
                   <div class="subscribe-buttons">
