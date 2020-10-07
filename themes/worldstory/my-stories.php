@@ -50,10 +50,10 @@ wp_enqueue_style('gpp-style');
                 'post_type' => 'post',
                    'author'        =>  $current_user->ID,
 				    'orderby'       =>  'post_date',
-				    'order'         =>  'ASC',
+				    'order'         =>  'DESC',
 				    'posts_per_page' => -1,
 
-                   'post_status' => array('publish','pending'),          
+                   'post_status' => array('publish','pending','draft'),          
 
                 );
 

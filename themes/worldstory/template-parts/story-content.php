@@ -79,10 +79,15 @@ echo wp_trim_words( get_the_content(), 20, '...' );
 
 
                         <div class="read">
-
-                            <a href="<?php echo get_permalink( $post->ID ); ?>">Read more &nbsp;<i class="fas fa-chevron-right"></i>
+                        <?php if($post->post_status=='publish') { ?>
+                            <a href="<?php echo get_permalink( $post->ID ); ?>"> Read more &nbsp;<i class="fas fa-chevron-right"></i>
 
                             </a>
+                            <?php } else{ ?>
+                             <a href="#"> Waiting for Admin approval &nbsp;<i class="fas fa-chevron-right"></i>
+
+                            </a>
+                            <?php } ?>
 
                         </div>
 

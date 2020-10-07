@@ -4,16 +4,7 @@
 
  * Template Name: Login Template
 
- * Template Post Type: post, page
-
- *
-
- * @package WordPress
-
- * @subpackage Twenty_Twenty
-
- * @since Twenty Twenty 1.0
-
+ 
  */
 
 get_header(); 
@@ -50,7 +41,7 @@ if ( is_user_logged_in() ) {
 
             <form name="login_form" id="login_form" class="login_form">
 
-        <div class="d-flex justify-content-center mb-3 logo"><img class="img-fluid" src="https://universitiesconnect.com/worldstory/wp-content/uploads/2020/08/BONGOS_WorldwideAdventures_Logo.png" alt="Italian Trulli"></div>
+        <div class="d-flex justify-content-center mb-3 logo"><img class="img-fluid" src="https://universitiesconnect.com/worldstory/wp-content/uploads/2020/10/cropped-wwstlogofinal-removebg-preview-1-1.png" alt="Italian Trulli"></div>
 
         <div class="d-flex flex-column">
 

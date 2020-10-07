@@ -41,7 +41,7 @@ $current_cat_id = (isset($_GET['cat'])?$_GET['cat']:'');
   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
       <a class="dropdown-item" href="<?php echo site_url('story-feed'); ?>">All </a>
  <?php
-  $allcat=get_categories(array( 'exclude'  => array(1),'number' => 6, 'hide_empty' =>false,'orderby' => 'name','order' => 'ASC',));
+  $allcat=get_categories(array( 'exclude'  => array(1),'number' => 20, 'hide_empty' =>false,'orderby' => 'name','order' => 'ASC',));
     $taxonomy="category";
     $i=0;
 

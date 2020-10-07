@@ -1018,7 +1018,7 @@ add_filter('wp_mail_from_name', 'res_fromname');
 function my_custom_logo() { ?>
      <style type="text/css">
          #login h1 a, .login h1 a {
-             background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/Reg_Bingos_logo.png);
+             background-image: url(https://universitiesconnect.com/worldstory/wp-content/uploads/2020/10/cropped-wwstlogofinal-removebg-preview-1-1.png);
              height:100px;
              width:100px;
              background-size: 100px 100px;
@@ -1102,3 +1102,32 @@ function woocommerce_change_price_by_addition($price, $product) {
 	//return the new price
     return  $price;
 }
+add_action( 'init', 'cp_change_post_object' );
+// Change dashboard Posts to News
+function cp_change_post_object() {
+    $get_post_type = get_post_type_object('post');
+    $labels = $get_post_type->labels;
+        $labels->name = 'Stories';
+        $labels->singular_name = 'Story';
+        $labels->add_new = 'Add Story';
+        $labels->add_new_item = 'Add Story';
+        $labels->edit_item = 'Edit Story';
+        $labels->new_item = 'Story';
+        $labels->view_item = 'View Story';
+        $labels->search_items = 'Search Stories';
+        $labels->not_found = 'No News found';
+        $labels->not_found_in_trash = 'No News found in Trash';
+        $labels->all_items = 'All Stories';
+        $labels->menu_name = 'Stories';
+        $labels->name_admin_bar = 'Stories';
+}
+
+add_action('wp', 'add_login_check');
+function add_login_check()
+{
+    if ( is_user_logged_in() && is_page( [7, 5] ) ) {
+        wp_redirect('http://worldwidestorytellers.com/story-feed');
+        exit;
+    }
+}
+
