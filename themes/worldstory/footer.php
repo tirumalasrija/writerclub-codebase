@@ -23,10 +23,10 @@
         </button>
       </div>
       <div class="modal-body">
-     <!-- <video width="100%" height="420" controls autoplay="false">
-        <source src="<?php echo get_template_directory_uri(); ?>/assets/homepage_vid.mp4" type="video/mp4">
+  <video  id="myVideo" width="100%" height="420" controls  autoplay="">
+        <source src="<?php echo get_template_directory_uri(); ?>/assets/front.mp4" type="video/mp4" autostart="false" >
      Your browser does not support the video tag.
-      </video>  -->
+      </video> 
         
       </div>
       
@@ -80,10 +80,10 @@
       <div class="col mt-4">
         <h6 class="text-uppercase mb-4 font-weight-normal color">Contact</h6>
         <ul>         
-          <li><a href="#"><i class="fas fa-envelope mr-3"></i>worldwidestorytellers@gmail.com</a></li>  
-          <li><a href="#"><i class="fas fa-phone mr-3"></i>+91 95632 23658</a></li>       
+          <li><a href="#"><i class="fas fa-envelope mr-3"></i>info@worldwidestorytellers.com</a></li>  
+          <!--<li><a href="#"><i class="fas fa-phone mr-3"></i>+195632 23658</a></li>   -->     
         </ul>
-           <!-- Social buttons -->
+           <!-- 
         <div class="text-center text-md-left ">
           <ul class="list-unstyled list-inline">
             <li class="list-inline-item">
@@ -108,7 +108,7 @@
               </a>
             </li>
           </ul>
-        </div>
+        </div> -->
       </div>
       <!-- Grid column -->	
 
@@ -130,7 +130,19 @@
 <!-- Footer -->
   
 
-   <script type="text/javascript">$('.nav-item').on('click',function(){
+   <script type="text/javascript">
+	   var vid = document.getElementById("myVideo");
+	   vid.autoplay = false;
+vid.load();
+
+		function playVid() { 
+		  vid.play(); 
+		} 
+
+		function pauseVid() { 
+		  vid.pause(); 
+		} 
+	   $('.nav-item').on('click',function(){
         $('.nav-item .nav-link').removeClass('active');
         $(this).find('.nav-link').addClass('active');
     });
@@ -158,12 +170,16 @@
      /* document.addEventListener("DOMContentLoaded", function(){
         $("#video").modal('show');
       }); */
+		
 		   $(document).ready(function(){
             setTimeout(function(){
             if(!Cookies.get('modalShown')) {
+					playVid();
                 $("#video").modal('show');
+			
               Cookies.set('modalShown', true);
             } else {
+				
                // alert('Your modal won\'t show again as it\'s shown before.');
             }
 

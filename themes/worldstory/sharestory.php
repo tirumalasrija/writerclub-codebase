@@ -1,5 +1,3 @@
-
-
 <?php
 
 /**
@@ -34,7 +32,7 @@ wp_redirect( site_url('login') );
             <div class="">
             <div class="col-lg-12 mb-5" data-toggle="modal" data-target="#newgroup">
             <div class=" createGroupmodal" (click)="openModal()">
-              <div class="img_align d-flex">
+              <div class="img_align align-items-center d-flex">
               
                <div class="">Create New Group</div>
                <div class="circlebg rounded-circle">
@@ -74,7 +72,7 @@ foreach($groups as $group ) {
 ?>
 
           <!--main-group start-->
-          <div class="col-lg-4 mb-5 mailscontainer editopopup" data-id="<?php echo $group->ID; ?>" data-name="<?php echo $group->post_title; ?>" data-value='<?php echo $finalemails ?>' data-toggle="modal" data-target="#editGroup">
+          <div class="col-lg-4 mb-5 mailscontainer " >
           <div class="custom-control custom-checkbox">
               <!-- <input type="checkbox" class="custom-control-input" id="customCheck1" checked=""> -->
               <input type="checkbox" name="sharestory"  class="custom-control-input sharestorycheck" value="<?php echo $group->ID; ?>">
@@ -100,7 +98,7 @@ foreach($groups as $group ) {
                     <a class="dropdown-item group-delete" data-id="<?= $group->ID ?>" href="#"><i class="delete-info"></i>Delete Group</a>
                   </div>
                 </div>
-               <div class="group">
+               <div class="group editopopup" data-id="<?php echo $group->ID; ?>" data-name="<?php echo $group->post_title; ?>" data-value='<?php echo $finalemails ?>' data-toggle="modal" data-target="#editGroup">
                 <?php if($emailsall){  foreach($emailsall as $emailsigle) { ?>
                 <a title="<?= $emailsigle ?>"> <img src="https://universitiesconnect.com/worldstory/wp-content/uploads/2020/06/default_avatar.jpg" alt="member"></a>
               <?php } } ?>
@@ -148,7 +146,8 @@ foreach($groups as $group ) {
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">Group Name <sup>*</sup></label>
             <input type="text" class="form-control" name="recipientname" id="recipientname" placeholder="Enter Group Name">
-          </div>
+           <span style="color:red" class="errorsgroup"></span>
+			</div>
         <?php       
         $single = true;
         $user_id = get_current_user_id();
@@ -158,7 +157,7 @@ foreach($groups as $group ) {
           ?>
 					<div class="form-group">
 						<h4 for='example_emailSUI'>Add Members email addresses</h4>
-						<input type='text' id='find-table' name='groupmembers' placeholder="example@mail.com" name="groupmembers" type="checkbox" id="find-table"  class='form-control' value=''>
+						<input type='text' id='find-table' name='groupmembers' placeholder="example@mail.com" name="groupmembers" type="checkbox" id="find-table"  class='form-control' value=''> <span style="color:red" class="errorsgroupemail"></span>
 					</div>				
 			
              <?php wp_nonce_field('vb_update_create','vb_update_create_nonce', true, true ); ?>
@@ -193,11 +192,13 @@ foreach($groups as $group ) {
             <label for="recipient-name" class="col-form-label">Group Name  <sup>*</sup></label>
             <input type="text" class="form-control" name="recipientname1" id="recipientname1" >
             <input type="hidden" class="form-control" name="groupidedit" id="groupidedit" >
+			   <span style="color:red" class="errorsgroup"></span>
             
           </div>
         	<div class="form-group">
 						<h4 for='example_emailSUI1'>Update Members email addresses</h4>
 						<input type='text' id='find-table1' name='groupmembers1' placeholder="example@mail.com"  type="checkbox" id="find-table1"  class='form-control' value=''>
+				 <span style="color:red" class="errorsgroupemail"></span>
 					</div>	
     
              <?php wp_nonce_field('vb_update_edit','vb_update_edit_nonce', true, true ); ?>
@@ -421,12 +422,22 @@ $groupId = $(this).attr("data-id");
    {
     event.preventDefault();
     $( "#allgroupname1" ).validate();
-    $('.update-group-sub').prop('disabled', true);
+    var searchIDs1 =  $('#find-table1').val();
+	 
+	   if($("#recipientname1").val()=='' || searchIDs1 =='[]')
+		   {
+			   if($("#recipientname1").val()=='')
+			   $(".errorsgroup").html("Group Name cannot be empty");
+			    if(searchIDs1 =='[]')
+			   $(".errorsgroupemail").html("Add atleast one Email Id in Group");
+			   return false
+		   }
+	     $('.update-group-sub').prop('disabled', true);
 
            var reg_nonce1 = $('#vb_update_edit_nonce').val();
           var recipientname1 = $("#recipientname1").val();
       var groupid = $("#groupidedit").val();
-         var searchIDs1 =  $('#find-table1').val();
+       
 
              jQuery.ajax({
 
@@ -492,6 +503,16 @@ $groupId = $(this).attr("data-id");
    {
     event.preventDefault();
      $( "#allgroupname" ).validate();
+	     var searchIDs =  $('#find-table').val();
+	 
+	   if($("#recipientname").val()=='' || searchIDs =='[]')
+		   {
+			   if($("#recipientname").val()=='')
+			   $(".errorsgroup").html("Group Name cannot be empty");
+			    if(searchIDs =='[]')
+			   $(".errorsgroupemail").html("Add atleast one Email Id in Group");
+			   return false
+		   }
      $('.create-group').prop('disabled', true);
            var reg_nonce = $('#vb_update_create_nonce').val();
           var recipientname = $("#recipientname").val();
@@ -600,6 +621,7 @@ $(function() {
    
 		});
     $(document).on("click", ".createGroupmodal", function () {
+		$(".multiple_emails-container").remove();
       $('#find-table').multiple_emails({theme: "SemanticUI"});
       $(".multiple_emails-input").attr("placeholder", "Enter Email Id");
     });

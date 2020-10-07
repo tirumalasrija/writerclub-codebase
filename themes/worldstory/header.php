@@ -1,18 +1,10 @@
 <?php
 /**
- * Header file for the Twenty Twenty WordPress default theme.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package WordPress
- * @subpackage Twenty_Twenty
- * @since Twenty Twenty 1.0
+ * Header file default theme.
  */
 ?>
 <!DOCTYPE html>
-
 <html class="no-js" <?php language_attributes(); ?>>
-
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,47 +24,12 @@
      <link href="https://lipis.github.io/bootstrap-sweetalert/dist/sweetalert.css" rel="stylesheet"/> 
 <script src="https://lipis.github.io/bootstrap-sweetalert/dist/sweetalert.js"
     ></script>
-   
-    <?php wp_head(); 
-    if ( is_user_logged_in() ) {
-    $logged = true;
-} else {
-   
-    $logged = false;
-}
-?>
-
+<?php wp_head();  ?>
   </head>
 
- <?php 
-$bogy = '';
- if($logged==true)
-{ 
-  $bogy = 'bg-none spl-header groups-page';
-  if(is_front_page())
-{
-   $bogy = 'spl-header';
-}
- }else{
-   $bogy = 'bg-none';
-if(is_front_page())
-{
-   $bogy = '';
-}
- }
 
-  ?>
-
-<body class="<?php echo $bogy; ?>">
-
-
-
-    <?php
-    wp_body_open();
-    ?>
-
+<body class="bg-none">
 <?php
-
     global $current_user;
     wp_get_current_user();
     $profile_img  = @json_decode(get_user_meta( $current_user->ID, 'mm_profile_image', true));
@@ -84,14 +41,19 @@ if(is_front_page())
        $profileurl = "https://worldwidestorytellers.com/wp-content/uploads/2020/06/author.png";
     }
   
-      ?>
-      <div class="container">
+ ?>
+<div class="container">
     <div  class="spacer pt-60">
-        <nav  class="navbar navbar-expand-lg navbar-dark info-color bg-white fixed-top">
+    <nav  class="navbar navbar-expand-lg navbar-dark info-color bg-white fixed-top">
             <div class="container">
             <div  class="overlay"></div>
-            <a  class="navbar-brand"  href="<?php echo site_url(''); ?>">
-            <img src="https://universitiesconnect.com/worldstory/wp-content/uploads/2020/08/BONGOS_WorldwideAdventures_Logo.png" /> 				 
+            <a  class="navbar-brand"  href="<?php echo home_url( '/' ); ?>">
+				<?php
+				$custom_logo_id = get_theme_mod( 'custom_logo' );
+$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+?>
+		
+          <img src="<?php echo  $image[0]; ?>" /> 			 
             </a>
             <button  aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent-4" data-toggle="collapse" type="button">
                 <span  class="navbar-toggler-icon"></span>
@@ -100,11 +62,11 @@ if(is_front_page())
             <div  class="user_pic active d-block d-none d-lg-none" ><a  href="#"><img src="<?= $profileurl; ?>"></a></div>
 
                 <ul  class="d-flex navbar-nav ml-auto">
-                    <li  class="nav-item"><a  class="nav-link"  href="<?php echo site_url('home'); ?>">Home</a></li>
+                    <li  class="nav-item"><a  class="nav-link"  href="<?php echo home_url( '/' ); ?>">Home</a></li>
                     <li  class="nav-item"><a  class="nav-link " href="<?php echo site_url('blog'); ?>">Blog</a></li>
                     <li  class="nav-item"><a  class="nav-link " href="<?php echo site_url('story-feed'); ?>">Story Feed</a></li>
               
-                    <?php if($logged==false) { ?>
+                    <?php if(!is_user_logged_in()) { ?>
                    <li  class="login_one nav-item"><a  class="login active" href="<?php echo site_url('login'); ?>">Login</a></li>
                     <li  class="login_one nav-item"><a  class="login active" href="<?php echo site_url('register'); ?>">Register</a></li>
                   
